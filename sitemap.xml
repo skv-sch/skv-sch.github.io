@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://your-github-username.github.io/repository-name/</loc>
-        <lastmod>2024-12-21</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://shanudhatirosh.github.io/school/</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://your-github-username.github.io/repository-name/#about</loc>
-        <lastmod>2024-12-21</lastmod>
+        <loc>https://shanudhatirosh.github.io/school/#about</loc>
+        <lastmod>2024-12-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-github-username.github.io/repository-name/#gallery</loc>
-        <lastmod>2024-12-21</lastmod>
+        <loc>https://shanudhatirosh.github.io/school/#gallery</loc>
+        <lastmod>2024-12-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-github-username.github.io/repository-name/#contact</loc>
-        <lastmod>2024-12-21</lastmod>
+        <loc>https://shanudhatirosh.github.io/school/#news</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#staff</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#prefects</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#contact</loc>
+        <lastmod>2024-12-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#programs</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#facilities</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#events</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#student-life</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://shanudhatirosh.github.io/school/#testimonials</loc>
+        <lastmod>2024-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
