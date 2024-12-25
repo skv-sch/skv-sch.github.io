@@ -293,26 +293,26 @@
 
         /* Scroll to Top Button */
         .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary-blue);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
-        }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
 
-        .scroll-top.visible {
-            opacity: 1;
-        }
+.scroll-top.visible {
+    opacity: 1;
+}
         
         /* New Animations and Effects */
         .hover-scale {
@@ -1172,9 +1172,9 @@
 
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
 
     <!-- Footer -->
     <footer>
@@ -1213,7 +1213,27 @@
     </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     
+<script>
+// Get the scroll-to-top button
+const scrollTopButton = document.getElementById("scrollTop");
 
+// Show/hide the button based on scroll position
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopButton.classList.add("visible");
+    } else {
+        scrollTopButton.classList.remove("visible");
+    }
+};
+
+// Scroll to top when button is clicked
+scrollTopButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
           // Navbar scroll effect
