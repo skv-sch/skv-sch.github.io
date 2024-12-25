@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+
 Sitemap: https://shanudhatirosh.github.io/school/sitemap.xml
