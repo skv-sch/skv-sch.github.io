@@ -95,9 +95,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Tiroshbrot123@gmail.com)
 
-<div> align="center">
-  <img src="https://raw.githubusercontent.com/ShanudhaTirosh/school/main/1.jpg" alt="Footer Banner" width="400px">
-<//div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ShanudhaTirosh/school/main/6.jpg" alt="Footer Banner" width="300px">
+</p>
 
 Made with ❤️ by [ShanudhaTirosh](https://github.com/ShanudhaTirosh)
 
