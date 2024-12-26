@@ -1391,9 +1391,11 @@
         </div>
     </section>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="scroll-to-top-btn">
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
     <i class="fas fa-arrow-up"></i>
-</button>
+</div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1431,7 +1433,28 @@
     </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
+    
+<script>
+// Get the scroll-to-top button
+const scrollTopButton = document.getElementById("scrollTop");
 
+// Show/hide the button based on scroll position
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopButton.classList.add("visible");
+    } else {
+        scrollTopButton.classList.remove("visible");
+    }
+};
+
+// Scroll to top when button is clicked
+scrollTopButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
           // Navbar scroll effect
