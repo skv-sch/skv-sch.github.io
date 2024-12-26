@@ -1,59 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Lankan International School</title>
+    <title>Sri Kalyanathissa college</title>
 
     <!-- SEO Meta Tags -->
-<meta name="description" content="Sri Lankan International School - fostering academic excellence and holistic development.">
-<meta name="keywords" content="Sri Lankan International School, Education, Sri Lanka Schools, Academic Excellence, SKV">
-<meta name="author" content="Sri Lankan International School">
-<meta name="robots" content="index, follow">
+    <meta name="description" content="Sri Kalyanathissa college - fostering academic excellence and holistic development.">
+    <meta name="keywords" content="Education, Sri Lanka Schools, Academic Excellence">
+    <meta name="author" content="Sri Lankan International School">
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://shanudhatirosh.github.io/school/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sri Lankan International School">
+    <meta property="og:description" content="Empowering leaders of tomorrow since 1974.">
+    <meta property="og:image" content="https://github.com/ShanudhaTirosh/school/blob/main/2.jpg">
+    <meta property="og:url" content="https://shanudhatirosh.github.io/school/">
+    <meta property="og:type" content="website">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Sri Lankan International School">
-<meta property="og:title" content="Sri Lankan International School">
-<meta property="og:description" content="Empowering leaders of tomorrow since 1974.">
-<meta property="og:url" content="https://shanudhatirosh.github.io/school/">
-<meta property="og:image" content="https://shanudhatirosh.github.io/school/1.png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sri Lankan International School">
+    <meta name="twitter:description" content="Shaping minds and building futures for over 50 years.">
+    <meta name="twitter:image" content="https://your-website.com/path-to-image.jpg">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@yourtwitterhandle">
-<meta name="twitter:title" content="Sri Lankan International School">
-<meta name="twitter:description" content="Shaping minds and building futures for over 50 years.">
-<meta name="twitter:image" content="https://shanudhatirosh.github.io/school/1.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    
+
     <script type="application/ld+json">
-{
+    {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Sri Lankan International School",
-    "url": "https://shanudhatirosh.github.io/school/",
-    "logo": "https://shanudhatirosh.github.io/school/1.png",
+    "url": "https://your-github-username.github.io/repository-name/",
+    "logo": "https://your-website.com/path-to-logo.jpg",
     "description": "Empowering leaders of tomorrow with innovative and holistic education.",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "123 Education Lane",
         "addressLocality": "Colombo",
         "addressCountry": "Sri Lanka"
-    },
-    "foundingDate": "1974",
-    "sameAs": [
-        "https://facebook.com/yourschool",
-        "https://twitter.com/yourschool",
-        "https://linkedin.com/company/yourschool"
-    ]
-}
-</script>
+        },
+    "foundingDate": "1974"
+    }
+    </script>
     <style>
         :root {
             --primary-blue: #1a75ff;
@@ -84,8 +75,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         }
-
-        /* Hero Section Styles */
+ /* Hero Section Styles */
 #heroCarousel {
     position: relative;
     width: 100%;
@@ -261,40 +251,24 @@
         .event-card {
             margin: 20px 0;
         }
-}
 
- /* Contact Section Styles */
-.contact-section {
-    background: linear-gradient(45deg, var(--primary-blue) 0%, var(--primary-green) 100%);
-    color: white;
-    padding: 80px 0;
-}
+        /* Contact Form */
+        .contact-section {
+            background: linear-gradient(45deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            color: white;
+            padding: 80px 0;
+        }
 
-/* Form Styles */
-.contact-section form {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
 
-.contact-section .form-control {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 12px;
-    margin-bottom: 15px;
-}
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
 
-.contact-section .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.contact-section .form-control:focus {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: none;
-    border-color: rgba(255, 255, 255, 0.5);
-}
 
 /* Map Container Styles */
 .map-container {
@@ -312,7 +286,7 @@
     .contact-section {
         padding: 60px 0;
     }
-    
+
     .map-container {
         margin-top: 30px;
     }
@@ -322,11 +296,11 @@
     .contact-section {
         padding: 40px 0;
     }
-    
+
     .contact-section form {
         padding: 20px;
     }
-    
+
     .map-container {
         min-height: 300px;
     }
@@ -336,16 +310,11 @@
     .contact-section {
         padding: 30px 0;
     }
-    
+
     .map-container {
         min-height: 250px;
     }
 }
-
-
-
-}
-
         /* Footer */
         footer {
             background: #333;
@@ -363,7 +332,7 @@
         .social-icons a:hover {
             color: var(--primary-gold);
         }
-        
+
 .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -497,27 +466,27 @@
 
         /* Scroll to Top Button */
         .scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--primary-blue);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
 
-.scroll-top.visible {
-    opacity: 1;
-}
-        
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
         /* New Animations and Effects */
         .hover-scale {
             transition: transform 0.3s ease;
@@ -740,8 +709,50 @@
 
 .download-button i {
     margin-right: 8px;
-        }
-        
+}
+.scroll-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-blue);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top-btn.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
     </style>
 </head>
 <body>
@@ -751,9 +762,8 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top glass">
         <div class="container">
             <a class="navbar-brand" href="#">
-    <img src="1.png" alt="SKV Logo" height="40">
-    SKV
-</a>
+                <i class="fas fa-graduation-cap me-2"></i>
+                SKV
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -761,7 +771,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#heroCarousel">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -783,8 +793,7 @@
                     </li>
                        <li class="nav-item">
                         <a class="nav-link" href="#downlodpdf">downlod application</a>
-                       </li>
-
+                    </li>
                 </ul>
             </div>
         </div>
@@ -831,7 +840,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="/api/placeholder/600/400" alt="School Building" class="img-fluid rounded">
+                    <img src="4.jpg" alt="School Building" class="img-fluid rounded">
                 </div>
                 <div class="col-md-6">
                     <h2>About Our School</h2>
@@ -877,7 +886,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Facilities Section -->
     <section id="facilities" class="py-5 bg-light">
         <div class="container">
@@ -926,14 +935,14 @@
                             <div class="card-body">
                                 <h3>Annual Sports Meet</h3>
                                 <p>January 15, 2024</p>
-                                <div class="countdown" data-date="2024-01-15"></div>
+                                <div class="countdown" data-date="2025-01-15"></div>
                             </div>
                         </div>
                         <div class="card event-card glass">
                             <div class="card-body">
                                 <h3>Science Exhibition</h3>
                                 <p>March 20, 2024</p>
-                                <div class="countdown" data-date="2024-03-20"></div>
+                                <div class="countdown" data-date="2025-03-20"></div>
                             </div>
                         </div>
                     </div>
@@ -941,7 +950,7 @@
             </div>
         </div>
     </section>
-    
+
 <!-- Student Life Section -->
     <section id="student-life" class="py-5">
         <div class="container">
@@ -1265,8 +1274,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="modal fade" id="newsModal4" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content modal-glass">
@@ -1281,7 +1290,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="modal fade" id="newsModal2" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content modal-glass">
@@ -1296,8 +1305,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="modal fade" id="newsModal3" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content modal-glass">
@@ -1312,9 +1321,9 @@
             </div>
         </div>
     </div>
-    
-    
-          <section id="downlodpdf" class="downlodpdf-section">
+
+
+      <section id="downlodpdf" class="downlodpdf-section">
     <div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
@@ -1325,10 +1334,10 @@
             <p class="mt-3 text-muted">Download our school application form to begin your journey with us</p>
         </div>
     </div>
-    </div>
-    
-    
+</div>
+
     <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="contact-section">
     <div class="container">
         <div class="row g-4"> <!-- Added gap between columns -->
@@ -1364,8 +1373,6 @@
     </div>
 </section>
 
-
-    
     <!-- Newsletter Section -->
     <section class="newsletter-section">
         <div class="container">
@@ -1384,12 +1391,9 @@
         </div>
     </section>
 
-
-    <!-- Scroll to Top Button -->
-    <div class="scroll-top" id="scrollTop">
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="scroll-to-top-btn">
     <i class="fas fa-arrow-up"></i>
-</div>
-
+</button>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1426,28 +1430,8 @@
         </div>
     </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    
-<script>
-// Get the scroll-to-top button
-const scrollTopButton = document.getElementById("scrollTop");
 
-// Show/hide the button based on scroll position
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollTopButton.classList.add("visible");
-    } else {
-        scrollTopButton.classList.remove("visible");
-    }
-};
 
-// Scroll to top when button is clicked
-scrollTopButton.addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
           // Navbar scroll effect
@@ -1473,7 +1457,7 @@ scrollTopButton.addEventListener("click", function() {
         document.addEventListener('click', function(event) {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             const navbarToggler = document.querySelector('.navbar-toggler');
-            
+
             if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
                 if (navbarCollapse.classList.contains('show')) {
                     bootstrap.Collapse.getInstance(navbarCollapse).hide();
@@ -1525,10 +1509,10 @@ scrollTopButton.addEventListener("click", function() {
             interval: 5000,
             pause: 'hover'
         });
-        
+
         // Update copyright year automatically
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
-        
+
 // Scroll animations
         const observerOptions = {
             threshold: 0.1
@@ -1597,7 +1581,7 @@ scrollTopButton.addEventListener("click", function() {
                 behavior: 'smooth'
             });
         });
-        
+
         // Loading Animation
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -1642,6 +1626,43 @@ scrollTopButton.addEventListener("click", function() {
             alert(`Thank you for subscribing with: ${email}`);
             e.target.reset();
         });
+        
+        // Scroll to Top Script
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("show");
+    } else {
+        mybutton.classList.remove("show");
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    // For modern browsers
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    
+    // For older browsers fallback
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// Ensure the button is hidden when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    mybutton = document.getElementById("myBtn");
+    if (mybutton) {
+        mybutton.classList.remove("show");
+    }
+});
     </script>
 </body>
 </html>
