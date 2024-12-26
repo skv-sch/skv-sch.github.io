@@ -263,7 +263,7 @@
         }
 }
 
-        /* Contact Section */
+ /* Contact Section Styles */
 .contact-section {
     background: linear-gradient(45deg, var(--primary-blue) 0%, var(--primary-green) 100%);
     color: white;
@@ -271,57 +271,43 @@
 }
 
 /* Form Styles */
-.form-control {
+.contact-section form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.contact-section .form-control {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
 }
 
-.form-control:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-    outline: none;
-}
-
-.form-control::placeholder {
+.contact-section .form-control::placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-section .form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Map Container Styles */
 .map-container {
-    position: relative;
-    width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    height: 100%;
+    min-height: 400px;
     overflow: hidden;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    border: none;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .contact-section {
-        padding: 70px 0;
-    }
-    
-    .map-container iframe {
-        min-height: 350px;
-    }
-}
-
+/* Responsive Adjustments */
 @media (max-width: 991px) {
     .contact-section {
         padding: 60px 0;
@@ -330,44 +316,34 @@
     .map-container {
         margin-top: 30px;
     }
-    
-    .map-container iframe {
-        min-height: 300px;
-    }
 }
 
 @media (max-width: 768px) {
     .contact-section {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
     
-    .contact-form {
-        margin-bottom: 30px;
+    .contact-section form {
+        padding: 20px;
     }
     
-    .form-control {
-        padding: 10px 12px;
-        margin-bottom: 15px;
-    }
-    
-    .map-container iframe {
-        min-height: 280px;
+    .map-container {
+        min-height: 300px;
     }
 }
 
 @media (max-width: 576px) {
     .contact-section {
-        padding: 30px 15px;
+        padding: 30px 0;
     }
     
     .map-container {
-        margin: 20px -15px;
-        border-radius: 0;
-    }
-    
-    .map-container iframe {
         min-height: 250px;
     }
+}
+
+
+
 }
 
         /* Footer */
@@ -1352,42 +1328,42 @@
     </div>
     
     
-    <section class="contact-section">
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
     <div class="container">
-        <div class="row">
+        <div class="row g-4"> <!-- Added gap between columns -->
             <!-- Contact Form Column -->
-            <div class="col-lg-6">
-                <form class="contact-form">
+            <div class="col-lg-6 col-md-12"> <!-- Modified column sizes -->
+                <h2 class="mb-4">Contact Us</h2>
+                <form id="contactForm" class="glass p-4 rounded">
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" placeholder="Your Phone">
+                        <textarea class="form-control" rows="5" placeholder="Your message here" required></textarea>
                     </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-light">Send Message</button>
+                    <button type="submit" class="btn btn-light w-100">Send Message</button>
                 </form>
             </div>
-            
             <!-- Map Column -->
-            <div class="col-lg-6">
-                <div class="map-container">
+            <div class="col-lg-6 col-md-12"> <!-- Modified column sizes -->
+                <div class="map-container glass p-2 rounded h-100">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2650137782584!2d80.11468819654505!3d6.228749906105636!2m3!1f0!2f0!3f0!3m2!1i1024"
-                        allowfullscreen=""
-                        loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2650137782584!2d80.11468819654505!3d6.228749906105636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae17f4b44a38bcf%3A0x8241885951bedb1c!2sSri%20Kalyana%20Thissa%20Vidyalaya!5e0!3m2!1sen!2slk!4v1734756631862!5m2!1sen!2slk"
+                        style="border:0; width: 100%; height: 100%; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
+
 
     
     <!-- Newsletter Section -->
