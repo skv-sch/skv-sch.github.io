@@ -86,19 +86,147 @@
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         }
 
-        /* Hero Section */
-        .carousel-item {
-            height: 100vh;
-            min-height: 400px;
-            background: no-repeat center center scroll;
-            background-size: cover;
-        }
+        /* Hero Section Styles */
+#heroCarousel {
+    position: relative;
+    width: 100%;
+    margin-top: 76px; /* Adjust based on your navbar height */
+    overflow: hidden;
+}
 
-        .carousel-caption {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
+.carousel-item {
+    width: 100%;
+    /* Set aspect ratio 16:9 for 1920x1080 */
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Image Overlay for Better Text Visibility */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Caption Styling */
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    bottom: 20%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    z-index: 3;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .carousel-caption h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    .carousel-caption {
+        bottom: 10%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 1.2rem;
+    }
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation for Captions */
+.carousel-caption {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image Loading Optimization */
+.carousel-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 
         /* About Section */
         .about-section {
@@ -597,35 +725,38 @@
     </nav>
 
     <!-- Hero Section -->
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('3.jpg')">
-                <div class="carousel-caption">
-                    <h1>Celebrating 50 Years of Academic Excellence</h1>
-                    <p>Shaping minds, Building futures</p>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('2.jpg')">
-                <div class="carousel-caption">
-                    <h1>Empowering the Leaders of Tomorrow</h1>
-                    <p>Excellence in Education Since 1974</p>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url('4.jpg')">
-                <div class="carousel-caption">
-                    <h1>World-Class Facilities for Holistic Learning</h1>
-                    <p>Where Innovation Meets Tradition</p>
-                </div>
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="3.jpg" alt="School Image" width="1920" height="1080">
+            <div class="carousel-caption glass">
+                <h1>Celebrating 50 Years of Academic Excellence</h1>
+                <p>Shaping minds, Building futures</p>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
+        <div class="carousel-item">
+            <img src="2.jpg" alt="School Image" width="1920" height="1080">
+            <div class="carousel-caption glass">
+                <h1>Empowering the Leaders of Tomorrow</h1>
+                <p>Excellence in Education Since 1974</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="4.jpg" alt="School Image" width="1920" height="1080">
+            <div class="carousel-caption glass">
+                <h1>World-Class Facilities for Holistic Learning</h1>
+                <p>Where Innovation Meets Tradition</p>
+            </div>
+        </div>
     </div>
-    <div class="virtual-tour-btn hover-scale">
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>    <div class="virtual-tour-btn hover-scale">
         <i class="fas fa-vr-cardboard me-2"></i>
         Take a Virtual Tour
     </div>
