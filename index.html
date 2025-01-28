@@ -845,10 +845,8 @@
     <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
     </button>
-</div>    <div class="virtual-tour-btn hover-scale">
-        <i class="fas fa-vr-cardboard me-2"></i>
-        Take a Virtual Tour
-    </div>
+</div>    
+    
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
@@ -1489,22 +1487,44 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const newsCards = document.querySelectorAll(".news-card"); // Target the correct class
-        const showMoreButton = document.getElementById("show-more-news");
+    const newsCards = document.querySelectorAll(".news-card");
+    const showMoreButton = document.getElementById("show-more-news");
 
-        // Initially show only the first 6 news items
+    // Create the "Show Less" button
+    const showLessButton = document.createElement("button");
+    showLessButton.id = "show-less-news";
+    showLessButton.classList.add("btn", "btn-secondary", "mt-3");
+    showLessButton.textContent = "Show Less";
+    showLessButton.style.display = "none"; // Hide the button initially
+
+    // Insert the "Show Less" button after the "Show More" button
+    showMoreButton.insertAdjacentElement("afterend", showLessButton);
+
+    // Initially show only the first 6 news items
+    newsCards.forEach((card, index) => {
+        if (index >= 6) {
+            card.classList.add("hidden");
+        }
+    });
+
+    // Show all news items when the "Show More" button is clicked
+    showMoreButton.addEventListener("click", () => {
+        newsCards.forEach(card => card.classList.remove("hidden"));
+        showMoreButton.style.display = "none"; // Hide the "Show More" button
+        showLessButton.style.display = "inline-block"; // Show the "Show Less" button
+    });
+
+    // Hide additional news items when the "Show Less" button is clicked
+    showLessButton.addEventListener("click", () => {
         newsCards.forEach((card, index) => {
             if (index >= 6) {
                 card.classList.add("hidden");
             }
         });
-
-        // Show all news items when the button is clicked
-        showMoreButton.addEventListener("click", () => {
-            newsCards.forEach(card => card.classList.remove("hidden"));
-            showMoreButton.style.display = "none"; // Hide the button after showing all news
-        });
+        showLessButton.style.display = "none"; // Hide the "Show Less" button
+        showMoreButton.style.display = "inline-block"; // Show the "Show More" button
     });
+});
 </script>
 <script>
 // Get the scroll-to-top button
