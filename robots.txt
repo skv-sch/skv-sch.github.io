@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Allow: /sitemap.xml
 
-Sitemap: https://shanudhatirosh.github.io/school/sitemap.xml
+Sitemap: https://skv-sch.github.io/sitemap.xml
