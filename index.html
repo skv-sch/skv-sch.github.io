@@ -42,7 +42,7 @@ Time	Activity	Focus
 7:00 AM	Breakfast	Nutrition and Community
 8:00 AM - 3:00 PM	Academic Classes	Intellectual Development
 3:30 PM - 5:00 PM	Extracurricular Activities	Personal Growth
-"Education at Sri Kalyanathissa Vidyalaya is not just about academic achievement, but about developing well-rounded individuals who can contribute meaningfully to society." - School Philosophy
+Education at Sri Kalyanathissa Vidyalaya is not just about academic achievement, but about developing well-rounded individuals who can contribute meaningfully to society. - School Philosophy
 The daily routine at Sri Kalyanathissa Vidyalaya shows a deep commitment to education. It prepares students for life's challenges.
 
 School Traditions and Annual Events
@@ -63,7 +63,7 @@ Ceremony	Purpose	Significance
 Prize Giving Day	Recognize academic excellence	Motivates students and celebrates achievement
 Graduation Ceremony	Celebrate student progression	Marks transition to higher education
 Merit Award Ceremony	Highlight exceptional performance	Encourages academic and personal growth
-"Our traditions are not just events, but bridges connecting our students to their cultural roots and future aspirations." - School Leadership
+Our traditions are not just events, but bridges connecting our students to their cultural roots and future aspirations. - School Leadership
 These ceremonies honor students' achievements and build a strong community. They show Sri Kalyanathissa Vidyalaya as a caring and inspiring place to learn.
 
 Future Outlook and Ongoing Developments
@@ -98,7 +98,7 @@ What makes Sri Kalyanathissa Vidyalaya unique in the Colombo educational landsca
 The school is special because it combines old Buddhist education with new teaching. It values culture and offers top education.
 
 How does the school support students' cultural and personal development?
-The school supports students through cultural events and personal growth. It helps them learn about culture and grow as individuals. ">
+The school supports students through cultural events and personal growth. It helps them learn about culture and grow as individuals.">
    <meta name="author" content="Sri Kalyanathissa Vidyalaya Batapola">
    <!-- Open Graph -->
    <meta property="og:title" content="Sri Kalyanathissa Vidyalaya Batapola">
@@ -909,6 +909,38 @@ The school supports students through cultural events and personal growth. It hel
               font-size: 16px;
               }
                }
+               
+               
+               /* Uniform Section Cards */
+#uniforms .card {
+  border: none;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#uniforms .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+#uniforms img {
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix scroll position so the section isn't hidden under navbar */
+section {
+  scroll-margin-top: 80px; /* adjust if your navbar is taller or shorter */
+}
+
                </style>
                </head>                  
                 <body>
@@ -936,19 +968,16 @@ The school supports students through cultural events and personal growth. It hel
                     <a class="nav-link" href="#gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#news">News</a>
+                    <a class="nav-link" href="#Announcements">Announcements</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#staff">Staff</a>
-                </li>
+                 <a class="nav-link" href="#school-profile">School Profile & History</a>
+                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#prefects">Prefects</a>
+                    <a class="nav-link" href="#staff">Staff & prefects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#downlodpdf">Download Application</a>
                 </li>
             </ul>
         </div>
@@ -1228,7 +1257,25 @@ The school supports students through cultural events and personal growth. It hel
             </div>
         </div>
     </section>
-
+<!-- Announcements Section -->
+<section id="announcements" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fade-in">Important Announcements</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card glass p-4 mb-3">
+                    <h4>School Reopens - May 15, 2025</h4>
+                    <p>School will reopen for the new term on May 15, 2025. All students are required to attend in full uniform.</p>
+                </div>
+                <div class="card glass p-4 mb-3">
+                    <h4>Annual Prize Giving - June 10, 2025</h4>
+                    <p>The Annual Prize Giving Ceremony will be held at the school main hall. Invitations will be sent soon.</p>
+                </div>
+                <!-- Add more announcements here -->
+            </div>
+        </div>
+    </div>
+</section>
     <!-- News Section -->
 <section id="news" class="py-5 bg-light">
     <div class="container">
@@ -1350,7 +1397,56 @@ The school supports students through cultural events and personal growth. It hel
     </div>
 </section>
                 
-                
+                <!-- School Profile Section -->
+<section id="school-profile" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fade-in">School Profile</h2>
+    <div class="text-center mb-4">
+      <img src="3.jp" alt="School Logo" class="img-fluid mb-3" style="max-height: 150px;">
+      <img src="3.jpg" alt="School Flag" class="img-fluid" style="max-height: 150px;">
+    </div>
+    <div class="glass p-4 rounded">
+      <p class="lead">Sri Kalyanathissa Vidyalaya, located in Batapola, Galle District, was established in 1974 with a vision to blend traditional Sri Lankan values with modern education.</p>
+      <p>Serving over 1,385 students from Grades 1 to 11, the school focuses on holistic development through a balanced curriculum of academics, arts, and sports, deeply rooted in Buddhist principles and global educational standards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Principal Section -->
+<section id="principal" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 fade-in">Our Principal</h2>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <div class="glass p-4 rounded">
+          <img src="2.jpg" alt="Principal" class="staff-image mb-3">
+          <h3>Dr. Sarah Perera</h3>
+          <p class="mt-2">Principal, Sri Kalyanathissa Vidyalaya</p>
+          <h5 class="mt-4">Principal's Message</h5>
+          <p>"At Sri Kalyanathissa Vidyalaya, we believe education is the key to a brighter future. Our aim is to nurture each student's potential, instill cultural values, and prepare them to face global challenges with confidence, knowledge, and integrity."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- History Section -->
+<section id="history" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fade-in">Our History</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="glass p-4 rounded">
+          <p class="lead">Founded in 1974, Sri Kalyanathissa Vidyalaya was born out of a vision to provide holistic education rooted in Sri Lankan Buddhist traditions.</p>
+          <p>From a modest beginning, the school has grown into a premier educational institution in the Southern Province. Our rich legacy of academic excellence, cultural pride, and community service continues to inspire future generations of students.</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="2.jpg" alt="School History" class="img-fluid rounded glass" style="max-height:400px; object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
   
     <!-- Staff Section -->
     <section id="staff" class="py-5">
@@ -1402,6 +1498,10 @@ The school supports students through cultural events and personal growth. It hel
                     </div>
                 </div>
                 <!-- Add more staff cards -->
+                <div class="text-center mt-4">
+    <button id="show-more-staff" class="btn btn-primary">Show All Staff</button>
+    <button id="show-less-staff" class="btn btn-secondary" style="display: none;">Show Less Staff</button>
+</div>
             </div>
         </div>
     <!-- Prefects Section -->
@@ -1450,9 +1550,49 @@ The school supports students through cultural events and personal growth. It hel
                     </div>
                 </div>
                 <!-- Add more prefect cards -->
+                <div class="text-center mt-4">
+    <button id="show-more-prefects" class="btn btn-primary">Show All Prefects</button>
+    <button id="show-less-prefects" class="btn btn-secondary" style="display: none;">Show Less Prefects</button>
+</div>
             </div>
         </div>
     </section>
+    <!-- School Uniform Section -->
+<section id="uniforms" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">School Uniform</h2>
+    
+    <div class="row g-4">
+      <!-- Boys Grade 1-9 -->
+      <div class="col-md-4">
+        <div class="card glass text-center p-3 h-100">
+          <img src="boys-1-9.jpg" alt="Boys Uniform (Grade 1-9)" class="img-fluid rounded mb-3">
+          <h4>Boys Uniform (Grade 1-9)</h4>
+          <p>White short-sleeve shirt with blue shorts. Includes school logo badge.</p>
+        </div>
+      </div>
+
+      <!-- Boys Grade 10-11 -->
+      <div class="col-md-4">
+        <div class="card glass text-center p-3 h-100">
+          <img src="boys-10-11.jpg" alt="Boys Uniform (Grade 10-11)" class="img-fluid rounded mb-3">
+          <h4>Boys Uniform (Grade 10-11)</h4>
+          <p>White long-sleeve shirt with long white trousers. Includes school logo badge and tie.</p>
+        </div>
+      </div>
+
+      <!-- Girls All Grades -->
+      <div class="col-md-4">
+        <div class="card glass text-center p-3 h-100">
+          <img src="girls.jpg" alt="Girls Uniform" class="img-fluid rounded mb-3">
+          <h4>Girls Uniform</h4>
+          <p>White school frock with blue belt and school badge. Same for all grades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- News Modal -->
     <div class="modal fade" id="newsModal1" tabindex="-1">
@@ -1708,7 +1848,69 @@ scrollTopButton.addEventListener("click", function() {
     return false; // Prevent the form from actually submitting
 } </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    
     <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // STAFF Section
+    const staffCards = document.querySelectorAll("#staff .staff-card");
+    const showMoreStaffBtn = document.getElementById("show-more-staff");
+    const showLessStaffBtn = document.getElementById("show-less-staff");
+
+    staffCards.forEach((card, index) => {
+        if (index >= 6) {
+            card.classList.add("hidden");
+        }
+    });
+
+    showMoreStaffBtn.addEventListener("click", () => {
+        staffCards.forEach(card => card.classList.remove("hidden"));
+        showMoreStaffBtn.style.display = "none";
+        showLessStaffBtn.style.display = "inline-block";
+    });
+
+    showLessStaffBtn.addEventListener("click", () => {
+        staffCards.forEach((card, index) => {
+            if (index >= 6) {
+                card.classList.add("hidden");
+            }
+        });
+        showMoreStaffBtn.style.display = "inline-block";
+        showLessStaffBtn.style.display = "none";
+    });
+
+    // PREFECTS Section
+    const prefectCards = document.querySelectorAll("#prefects .staff-card");
+    const showMorePrefectsBtn = document.getElementById("show-more-prefects");
+    const showLessPrefectsBtn = document.getElementById("show-less-prefects");
+
+    prefectCards.forEach((card, index) => {
+        if (index >= 6) {
+            card.classList.add("hidden");
+        }
+    });
+
+    showMorePrefectsBtn.addEventListener("click", () => {
+        prefectCards.forEach(card => card.classList.remove("hidden"));
+        showMorePrefectsBtn.style.display = "none";
+        showLessPrefectsBtn.style.display = "inline-block";
+    });
+
+    showLessPrefectsBtn.addEventListener("click", () => {
+        prefectCards.forEach((card, index) => {
+            if (index >= 6) {
+                card.classList.add("hidden");
+            }
+        });
+        showMorePrefectsBtn.style.display = "inline-block";
+        showLessPrefectsBtn.style.display = "none";
+    });
+});
+</script>
+    
+    
+    <script>
+    
           // Navbar scroll effect
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
