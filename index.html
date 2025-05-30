@@ -799,7 +799,7 @@
 					0 4px 10px rgba(0, 0, 0, 0.3);
 			}
 			.scroll-to-top-btn {
-				display: none; /* Hidden by default */
+				display: none;
 				position: fixed;
 				bottom: 20px;
 				right: 30px;
@@ -816,6 +816,8 @@
 				font-size: 18px;
 				transition: all 0.3s ease;
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+				justify-content: center;
 			}
 
 			.scroll-to-top-btn:hover {
@@ -826,8 +828,6 @@
 
 			.scroll-to-top-btn.show {
 				display: flex;
-				align-items: center;
-				justify-content: center;
 			}
 
 			/* For mobile devices */
@@ -841,7 +841,6 @@
 					font-size: 16px;
 				}
 			}
-
 			/* Uniform Section Cards */
 			#uniforms .card {
 				border: none;
