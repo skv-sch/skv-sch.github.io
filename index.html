@@ -2589,23 +2589,6 @@
 				counters.forEach((counter) => observer.observe(counter));
 			});
 
-			// Scroll to Top Button
-			window.addEventListener("scroll", () => {
-				const scrollBtn = document.querySelector(".scroll-top");
-				if (window.scrollY > 300) {
-					scrollBtn.classList.add("visible");
-				} else {
-					scrollBtn.classList.remove("visible");
-				}
-			});
-
-			document.querySelector(".scroll-top").addEventListener("click", () => {
-				window.scrollTo({
-					top: 0,
-					behavior: "smooth",
-				});
-			});
-
 			// Loading Animation
 			window.addEventListener("load", () => {
 				setTimeout(() => {
