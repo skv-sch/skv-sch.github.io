@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+	lang="en"
+	xml:lang="en"
+	xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 
-		<title>Sri Kalyanathissa Vidyalaya | Batapola, Sri Lanka</title>
+		<title>Sri Kalyanathissa College | Batapola, Sri Lanka</title>
 		<meta
 			name="description"
-			content="Discover Sri Kalyanathissa Vidyalaya in Batapola, Galle — a leading school in Sri Lanka for Grades 1–11 with academic and cultural excellence." />
+			content="Discover Sri Kalyanathissa College in Batapola, Galle — a leading school in Sri Lanka for Grades 1–11 with academic and cultural excellence." />
 		<link
 			rel="canonical"
 			href="https://skv-sch.github.io/" />
 
+		<meta
+			name="keywords"
+			content="Sri Kalyanathissa College, Batapola School, Sri Lanka Education, Galle District School, Buddhist School Sri Lanka, කල්‍යාණතිස්ස විද්‍යාලය" />
+		<meta
+			name="description"
+			content="Sri Kalyanathissa College is a leading Buddhist school in Batapola, Galle District, Sri Lanka. Offering excellence in education since 1974 with modern facilities and traditional values." />
 		<!-- Open Graph / Facebook -->
+
 		<meta
 			property="og:type"
 			content="website" />
+		<meta
+			property="og:site_name"
+			content="Sri Kalyanathissa College" />
+		<meta
+			property="og:locale"
+			content="en_US" />
+		<meta
+			name="twitter:creator"
+			content="@schoolhandle" />
 		<meta
 			property="og:url"
 			content="https://skv-sch.github.io/" />
 		<meta
 			property="og:title"
-			content="Sri Kalyanathissa Vidyalaya | Batapola" />
+			content="SriKalyanathissa College | Batapola" />
 		<meta
 			property="og:description"
 			content="Explore Sri Lanka's top provincial school offering modern education rooted in Theravada Buddhist values." />
@@ -37,7 +56,7 @@
 			content="summary_large_image" />
 		<meta
 			name="twitter:title"
-			content="Sri Kalyanathissa Vidyalaya | Batapola" />
+			content="Sri Kalyanathissa College | Batapola" />
 		<meta
 			name="twitter:description"
 			content="Leading school in Galle District, Sri Lanka. Grades 1–11. Academic excellence meets culture." />
@@ -82,7 +101,10 @@
 				"url": "https://skv-sch.github.io",
 				"logo": "https://skv-sch.github.io/favicon.png",
 				"image": "https://skv-sch.github.io/4.jpg",
-				"description": "Sri Kalyanathissa Vidyalaya is a provincial school in Sri Lanka offering Grades 1–11 with a focus on holistic, Buddhist-based education.",
+				"description": "Sri Kalyanathissa College is a provincial school in Sri Lanka offering Grades 1–11 with a focus on holistic, Buddhist-based education.",
+				"foundingDate": "1974",
+				"schoolType": "Public Provincial School",
+				"founder": "Ministry of Education, Sri Lanka",
 				"address": {
 					"@type": "PostalAddress",
 					"streetAddress": "Batapola",
@@ -100,40 +122,6 @@
 				},
 				"sameAs": [
 					"https://www.facebook.com/G.SriKalyanathissaVidyalayaBatapola"
-				]
-			}
-		</script>
-
-		<!-- Structured Data: FAQ -->
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "FAQPage",
-				"mainEntity": [
-					{
-						"@type": "Question",
-						"name": "Where is Sri Kalyanathissa Vidyalaya located?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Sri Kalyanathissa Vidyalaya is located in Batapola, Galle District, Southern Province, Sri Lanka."
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "What grades does the school offer?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "The school offers classes from Grade 1 to Grade 11 under the national curriculum."
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "What is unique about the school?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "The school blends Theravada Buddhist values with modern academic practices, fostering intellectual, cultural, and spiritual growth."
-						}
-					}
 				]
 			}
 		</script>
@@ -810,8 +798,10 @@
 				box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
 					0 4px 10px rgba(0, 0, 0, 0.3);
 			}
+			/* Add inside your existing <style> tag */
+
 			.scroll-to-top-btn {
-				display: none; /* Hidden by default */
+				display: none;
 				position: fixed;
 				bottom: 20px;
 				right: 30px;
@@ -828,6 +818,8 @@
 				font-size: 18px;
 				transition: all 0.3s ease;
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+				justify-content: center;
 			}
 
 			.scroll-to-top-btn:hover {
@@ -838,8 +830,6 @@
 
 			.scroll-to-top-btn.show {
 				display: flex;
-				align-items: center;
-				justify-content: center;
 			}
 
 			/* For mobile devices */
@@ -853,7 +843,6 @@
 					font-size: 16px;
 				}
 			}
-
 			/* Uniform Section Cards */
 			#uniforms .card {
 				border: none;
@@ -906,9 +895,10 @@
 					href="#">
 					<img
 						src="1.png"
-						alt="Site Logo"
+						alt="Sri Kalyanathissa Vidyalaya Logo"
 						width="50"
 						height="50"
+						loading="lazy"
 						class="d-inline-block align-text-top" />
 				</a>
 				<button
@@ -988,7 +978,11 @@
 						width="1920"
 						height="1080" />
 					<div class="carousel-caption glass">
-						<h1>Sri kalyanathissa colleg,Celebrating 50 Years of Academic Excellence</h1>
+						<h1>
+							Sri kalyanathissa vidyalaya,Celebrating 50 Years of Academic
+							Excellence
+						</h1>
+						<h2>Sri kalyanathissa coollege</h2>
 						<p>Shaping minds, Building futures</p>
 					</div>
 				</div>
@@ -999,7 +993,10 @@
 						width="1920"
 						height="1080" />
 					<div class="carousel-caption glass">
-						<h1>sri kalyanathissa college,Empowering the Leaders of Tomorrow</h1>
+						<h1>
+							Sri kalyanathissa vidyalaya,Empowering the Leaders of Tomorrow
+						</h1>
+						<h2>Sri kalyanathissa coollege</h2>
 						<p>Excellence in Education Since 1974</p>
 					</div>
 				</div>
@@ -1010,7 +1007,11 @@
 						width="1920"
 						height="1080" />
 					<div class="carousel-caption glass">
-						<h1>sri kalyanathissa college,World-Class Facilities for Holistic Learning</h1>
+						<h1>
+							Sri kalyanathissa vidyalaya,World-Class Facilities for Holistic
+							Learning
+						</h1>
+						<h2>Sri kalyanathissa coollege</h2>
 						<p>Where Innovation Meets Tradition</p>
 					</div>
 				</div>
@@ -1050,7 +1051,7 @@
 					<div class="col-md-6">
 						<h2 class="notranslate">About Our School</h2>
 						<p>
-							sri kalyanathissa ayntsvafsounded in 1974, our school has been a beacon of knowledge and
+							Founded in 1974, our school has been a beacon of knowledge and
 							culture in Sri Lanka. We combine traditional values with modern
 							education techniques to nurture well-rounded individuals.
 						</p>
@@ -2178,12 +2179,14 @@
 			style="display: none"></div>
 
 		<!-- Scroll to Top Button -->
-		<div
-			class="scroll-top"
-			id="scrollTop">
-			<i class="fas fa-arrow-up"></i>
-		</div>
 
+		<!-- Insert before the footer -->
+		<button
+			class="scroll-to-top-btn"
+			id="scrollToTopBtn"
+			title="Go to top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
 		<!-- Footer -->
 		<footer>
 			<div class="container notranslate">
@@ -2240,6 +2243,7 @@
 				<span id="translate-btn-text">Switch to Sinhala</span>
 			</button>
 		</div>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 		<!-- Google Translate Widget -->
 		<script type="text/javascript">
@@ -2323,26 +2327,30 @@
 			});
 		</script>
 		<script>
-			// Get the scroll-to-top button
-			const scrollTopButton = document.getElementById("scrollTop");
+			/* filepath: vscode-vfs://github/skv-sch/skv-sch.github.io/index.html */
+			/* Add inside a <script> tag before the closing </body> tag */
 
-			// Show/hide the button based on scroll position
-			window.onscroll = function () {
-				if (
-					document.body.scrollTop > 20 ||
-					document.documentElement.scrollTop > 20
-				) {
-					scrollTopButton.classList.add("visible");
-				} else {
-					scrollTopButton.classList.remove("visible");
-				}
-			};
+			document.addEventListener("DOMContentLoaded", function () {
+				const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-			// Scroll to top when button is clicked
-			scrollTopButton.addEventListener("click", function () {
-				window.scrollTo({
-					top: 0,
-					behavior: "smooth",
+				// Show button when scrolling down
+				window.addEventListener("scroll", function () {
+					if (
+						document.body.scrollTop > 20 ||
+						document.documentElement.scrollTop > 20
+					) {
+						scrollToTopBtn.classList.add("show");
+					} else {
+						scrollToTopBtn.classList.remove("show");
+					}
+				});
+
+				// Smooth scroll to top when button is clicked
+				scrollToTopBtn.addEventListener("click", function () {
+					window.scrollTo({
+						top: 0,
+						behavior: "smooth",
+					});
 				});
 			});
 		</script>
@@ -2589,36 +2597,12 @@
 				counters.forEach((counter) => observer.observe(counter));
 			});
 
-			// Scroll to Top Button
-			window.addEventListener("scroll", () => {
-				const scrollBtn = document.querySelector(".scroll-top");
-				if (window.scrollY > 300) {
-					scrollBtn.classList.add("visible");
-				} else {
-					scrollBtn.classList.remove("visible");
-				}
-			});
-
-			document.querySelector(".scroll-top").addEventListener("click", () => {
-				window.scrollTo({
-					top: 0,
-					behavior: "smooth",
-				});
-			});
-
 			// Loading Animation
 			window.addEventListener("load", () => {
 				setTimeout(() => {
 					document.querySelector(".loader").classList.add("fade-out");
 				}, 1000);
 			});
-
-			// Virtual Tour Button Click Handler
-			document
-				.querySelector(".virtual-tour-btn")
-				.addEventListener("click", () => {
-					alert("Virtual tour feature coming soon!");
-				});
 
 			// Enhanced Scroll Animations
 			const scrollAnimations = () => {
@@ -2731,6 +2715,6 @@
 			});
 		</script>
 
-		<!-- Devolope_By_ktv_media_unit_2025 -->
+		<!-- Devolope_By_Shanudha-Tirosh-->
 	</body>
 </html>
