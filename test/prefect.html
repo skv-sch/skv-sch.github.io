@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>SKV Prefects - Student Leadership | Sri Kalyanathissa Vidyalaya</title>
+    <meta name="description" content="Meet the student prefects of Sri Kalyanathissa Vidyalaya, Batapola. Discover our student leadership team dedicated to excellence, discipline, and service since 1974.">
+    <meta name="keywords" content="SKV prefects, student leadership, Sri Kalyanathissa Vidyalaya, Batapola school, student council">
+    <meta name="author" content="Sri Kalyanathissa Vidyalaya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SKV Prefects - Student Leadership | Sri Kalyanathissa Vidyalaya">
+    <meta property="og:description" content="Meet the student prefects of Sri Kalyanathissa Vidyalaya, Batapola. Our student leadership team embodies excellence, discipline, and service.">
+    <meta property="og:url" content="https://skv-sch.github.io/prefect.html">
+    <meta property="og:site_name" content="Sri Kalyanathissa Vidyalaya">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SKV Prefects - Student Leadership">
+    <meta name="twitter:description" content="Meet the student prefects of Sri Kalyanathissa Vidyalaya, Batapola. Excellence in leadership since 1974.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #fbbf24;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--gradient-primary);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--white) !important;
+            text-decoration: none;
+        }
+
+        .header .navbar-nav .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .header .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .navbar-toggler {
+            border-color: var(--white);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background: var(--bg-light);
+            padding: 4rem 0;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .intro-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Prefect Cards */
+        .prefect-card {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+
+        .prefect-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .prefect-image {
+            width: 100%;
+            height: 250px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prefect-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="50" cy="50" r="25" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></svg>') center/cover;
+            opacity: 0.3;
+        }
+
+        .prefect-content {
+            padding: 1.5rem;
+        }
+
+        .prefect-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .prefect-role {
+            color: var(--accent-color);
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .prefect-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .prefect-responsibilities {
+            list-style: none;
+            padding: 0;
+        }
+
+        .prefect-responsibilities li {
+            padding: 0.3rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .prefect-responsibilities li::before {
+            content: '✓';
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8rem;
+            opacity: 0.1;
+            font-family: serif;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer h5 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer p, .footer li {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            padding: 0.2rem 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .intro-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .prefect-image {
+                height: 200px;
+                font-size: 3rem;
+            }
+            
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .content-section, .intro-section {
+                padding: 2rem 0;
+            }
+            
+            .hero-section {
+                padding: 2rem 0;
+            }
+            
+            .prefect-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for accessibility */
+        .prefect-card:focus-within {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-graduation-cap me-2"></i>
+                    Sri Kalyanathissa Vidyalaya
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/prefect.html">Prefects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1>SKV Prefects</h1>
+                <p>Empowering student leaders who embody excellence, discipline, and service in our school community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content fade-in-up">
+                <div class="section-title">
+                    <h2>Student Leadership Excellence</h2>
+                </div>
+                <p>At Sri Kalyanathissa Vidyalaya, our prefects are carefully selected student leaders who demonstrate outstanding character, academic excellence, and commitment to serving their peers. They play a vital role in maintaining school discipline, fostering a positive learning environment, and upholding the Buddhist values that form the foundation of our institution.</p>
+                <p>Our prefectship program, established alongside the school in 1974, has produced countless leaders who continue to serve their communities with honor and distinction.</p>
+                <div class="intro-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Senior Prefects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">House Prefects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Years of Tradition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prefects Section -->
+    <main class="content-section">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Our Student Leaders</h2>
+            </div>
+            
+            <div class="row">
+                <!-- Head Prefect -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Kavindi Perera</h3>
+                            <div class="prefect-role">Head Prefect</div>
+                            <p class="prefect-description">
+                                Leading with wisdom and compassion, Kavindi exemplifies the highest standards of academic excellence and moral integrity. She coordinates all prefect activities and serves as a bridge between students and faculty.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Overall student leadership and coordination</li>
+                                <li>Liaison with school administration</li>
+                                <li>Organizing school assemblies and events</li>
+                                <li>Mentoring junior prefects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deputy Head Prefect -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Sahan Wickramasinghe</h3>
+                            <div class="prefect-role">Deputy Head Prefect</div>
+                            <p class="prefect-description">
+                                Supporting the Head Prefect with dedication and initiative, Sahan brings strong organizational skills and a commitment to student welfare to his role as deputy leader.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Supporting Head Prefect duties</li>
+                                <li>Coordinating discipline committees</li>
+                                <li>Managing prefect schedules</li>
+                                <li>Student welfare initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior Prefects -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Nethmi Silva</h3>
+                            <div class="prefect-role">Senior Prefect - Academics</div>
+                            <p class="prefect-description">
+                                Passionate about learning and teaching, Nethmi coordinates academic support programs and peer tutoring initiatives.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Academic support programs</li>
+                                <li>Study group coordination</li>
+                                <li>Library management assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Akila Rajapaksa</h3>
+                            <div class="prefect-role">Senior Prefect - Welfare</div>
+                            <p class="prefect-description">
+                                Dedicated to student wellbeing, Akila ensures that every student feels supported and valued in our school community.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Student counseling support</li>
+                                <li>Welfare program coordination</li>
+                                <li>Anti-bullying initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Sandun Fernando</h3>
+                            <div class="prefect-role">Senior Prefect - Sports</div>
+                            <p class="prefect-description">
+                                Promoting physical fitness and sportsmanship, Sandun leads our school's athletic programs and inter-house competitions.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Sports event organization</li>
+                                <li>Inter-house competitions</li>
+                                <li>Athletic team coordination</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Dilini Jayawardana</h3>
+                            <div class="prefect-role">Senior Prefect - Arts & Culture</div>
+                            <p class="prefect-description">
+                                Celebrating Sri Lankan heritage through arts, Dilini organizes cultural events and promotes traditional values among students.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Cultural event planning</li>
+                                <li>Traditional arts promotion</li>
+                                <li>Festival celebrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Chamika Bandara</h3>
+                            <div class="prefect-role">Senior Prefect - Environment</div>
+                            <p class="prefect-description">
+                                Environmental stewardship advocate, Chamika leads sustainability initiatives and promotes eco-friendly practices throughout the school.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Environmental awareness programs</li>
+                                <li>School garden maintenance</li>
+                                <li>Recycling initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="prefect-card fade-in-up">
+                        <div class="prefect-image">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="prefect-content">
+                            <h3 class="prefect-name">Tharushi Kumari</h3>
+                            <div class="prefect-role">Senior Prefect - Community Service</div>
+                            <p class="prefect-description">
+                                Committed to service beyond school walls, Tharushi coordinates community outreach programs and volunteer activities.
+                            </p>
+                            <ul class="prefect-responsibilities">
+                                <li>Community outreach programs</li>
+                                <li>Volunteer coordination</li>
+                                <li>Social service projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-content fade-in-up">
+                <div class="quote-text">
+                    Leadership is not about being in charge. It is about taking care of those in your charge and setting an example that inspires others to achieve greatness.
+                </div>
+                <div class="quote-author">
+                    - SKV Prefect Code of Conduct
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>Sri Kalyanathissa Vidyalaya</h5>
+                    <p>Empowering minds, nurturing values, and building tomorrow's leaders since 1974. Rooted in Buddhist principles, reaching for academic excellence.</p>
+                    <p><strong>Established:</strong> 1974<br>
+                    <strong>Students:</strong> 1,385+ (Grades 1-11)<br>
+                    <strong>Location:</strong> Batapola, Galle District</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Contact Information</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Batapola, Galle District, Sri Lanka</li>
+                        <li><i class="fas fa-phone me-2"></i>+94912260035</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@skv.edu.lk</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Follow Us</h5>
+                    <ul class="d-flex gap-3">
+                        <li><a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Sri Kalyanathissa Vidyalaya. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 d-none" style="z-index:999;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+    // Fade in animations on scroll
+    const faders = document.querySelectorAll('.fade-in-up');
+
+    const appearOptions = {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('animate');
+            appearOnScroll.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove("d-none");
+        } else {
+            backToTopBtn.classList.add("d-none");
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+</body>
+</html>
+    

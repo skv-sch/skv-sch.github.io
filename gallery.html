@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Photo Gallery - Sri kalyanathissa vidyalaya</title>
+		<!-- Add to your <head> -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			rel="stylesheet" />
+		<style>
+			:root {
+				--primary-blue: #1a75ff;
+				--primary-blue: #1a75ff;
+				--primary-green: #00a65a;
+				--primary-gold: #ffd700;
+				--neutral-gray: #f8f9fa;
+			}
+
+			/* Footer Styles */
+			footer {
+				background: #333;
+				color: white;
+				padding: 50px 0;
+			}
+
+			footer h3 {
+				margin-bottom: 20px;
+				color: white;
+			}
+
+			footer p {
+				color: rgba(255, 255, 255, 0.8);
+				line-height: 1.6;
+			}
+
+			footer ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			footer ul li {
+				margin-bottom: 8px;
+			}
+
+			footer ul li a {
+				color: rgba(255, 255, 255, 0.8);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			footer ul li a:hover {
+				color: var(--primary-gold);
+			}
+
+			.social-icons a {
+				color: white;
+				margin: 0 10px;
+				font-size: 24px;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons a:hover {
+				color: var(--primary-gold);
+			}
+
+			footer hr {
+				border-color: rgba(255, 255, 255, 0.1);
+				margin: 30px 0;
+			}
+
+			.notranslate {
+				translate: no !important;
+			}
+
+			/* Scroll to Top Button */
+			.scroll-to-top-btn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				border: none;
+				outline: none;
+				background-color: var(--primary-blue);
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				font-size: 18px;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+				justify-content: center;
+			}
+
+			.scroll-to-top-btn:hover {
+				background-color: #0056b3;
+				transform: translateY(-3px);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+			}
+
+			.scroll-to-top-btn.show {
+				display: flex;
+			}
+
+			/* Language Toggle Button */
+			.skv-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 14px 24px;
+				font-size: 1rem;
+				font-weight: bold;
+				color: white;
+				background: linear-gradient(135deg, #00c3ff, #fd4eff);
+				border: none;
+				border-radius: 12px;
+				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2),
+					inset 0 20px 30px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			}
+
+			.skv-btn:hover {
+				background: linear-gradient(135deg, #fd4eff, #00c3ff);
+				transform: translateY(-2px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+					inset 0 0 15px rgba(255, 255, 255, 0.3);
+			}
+
+			.skv-btn:active {
+				transform: scale(0.97);
+				box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+					0 4px 10px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Mobile Responsive */
+			@media only screen and (max-width: 768px) {
+				footer {
+					padding: 30px 0;
+				}
+
+				.scroll-to-top-btn {
+					bottom: 15px;
+					right: 15px;
+					width: 40px;
+					height: 40px;
+					padding: 12px;
+					font-size: 16px;
+				}
+
+				.social-icons a {
+					font-size: 20px;
+					margin: 0 8px;
+				}
+			}
+
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+
+			.navbar {
+				transition: background 0.3s ease;
+			}
+
+			.navbar.scrolled {
+				background: rgba(255, 255, 255, 0.95) !important;
+			}
+
+			.navbar-brand img {
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.nav-link {
+				position: relative;
+				padding: 5px 0;
+			}
+
+			.nav-link::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-blue);
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				position: relative;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+				pointer-events: none;
+				z-index: -1;
+			}
+
+			/* Main Content */
+			.main-content {
+				padding: 2rem 0;
+				min-height: calc(100vh - 200px);
+			}
+
+			.page-title {
+				text-align: center;
+				color: white;
+				margin-bottom: 3rem;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.page-title h1 {
+				font-size: 3rem;
+				font-weight: 700;
+				margin-bottom: 0.5rem;
+			}
+
+			.page-title p {
+				font-size: 1.2rem;
+				opacity: 0.9;
+			}
+
+			/* Filter Buttons */
+			.filter-buttons {
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				margin-bottom: 3rem;
+				flex-wrap: wrap;
+			}
+
+			.filter-btn {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				color: white;
+				padding: 0.75rem 1.5rem;
+				border-radius: 25px;
+				font-weight: 500;
+				transition: all 0.3s ease;
+				cursor: pointer;
+			}
+
+			.filter-btn:hover,
+			.filter-btn.active {
+				background: rgba(255, 255, 255, 0.2);
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+			}
+
+			/* Gallery Grid */
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				padding: 0 1rem;
+			}
+
+			.gallery-card {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 20px;
+				overflow: hidden;
+				transition: all 0.3s ease;
+				cursor: pointer;
+			}
+
+			.gallery-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+				background: rgba(255, 255, 255, 0.15);
+			}
+
+			.gallery-card img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+			}
+
+			.gallery-card:hover img {
+				transform: scale(1.1);
+			}
+
+			.gallery-card-body {
+				padding: 1.5rem;
+				color: white;
+			}
+
+			.gallery-card-title {
+				font-size: 1.2rem;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			}
+
+			.gallery-card-text {
+				opacity: 0.9;
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			.gallery-card-date {
+				font-size: 0.8rem;
+				opacity: 0.7;
+				margin-top: 0.5rem;
+				font-style: italic;
+			}
+
+			/* Footer */
+			.footer {
+				background: rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(10px);
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				color: white;
+				padding: 2rem 0;
+				margin-top: 4rem;
+			}
+
+			.footer-content {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				margin-bottom: 2rem;
+			}
+
+			.footer-section h5 {
+				margin-bottom: 1rem;
+				font-weight: 600;
+			}
+
+			.footer-section p,
+			.footer-section a {
+				color: rgba(255, 255, 255, 0.8);
+				text-decoration: none;
+				line-height: 1.6;
+			}
+
+			.footer-section a:hover {
+				color: white;
+			}
+
+			.footer-bottom {
+				text-align: center;
+				padding-top: 2rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				opacity: 0.7;
+			}
+
+			.social-links {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				margin-top: 1rem;
+			}
+
+			.social-links a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				color: white;
+				font-size: 1.2rem;
+				transition: all 0.3s ease;
+			}
+
+			.social-links a:hover {
+				background: rgba(255, 255, 255, 0.2);
+				transform: translateY(-2px);
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.page-title h1 {
+					font-size: 2rem;
+				}
+
+				.gallery-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+				}
+
+				.filter-buttons {
+					gap: 0.5rem;
+				}
+
+				.filter-btn {
+					padding: 0.5rem 1rem;
+					font-size: 0.9rem;
+				}
+			}
+
+			/* Loading Animation */
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.gallery-card {
+				animation: fadeInUp 0.6s ease forwards;
+			}
+
+			.gallery-card:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+			.gallery-card:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+			.gallery-card:nth-child(3) {
+				animation-delay: 0.3s;
+			}
+			.gallery-card:nth-child(4) {
+				animation-delay: 0.4s;
+			}
+			.gallery-card:nth-child(5) {
+				animation-delay: 0.5s;
+			}
+			.gallery-card:nth-child(6) {
+				animation-delay: 0.6s;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top glass">
+			<div class="container">
+				<a
+					class="navbar-brand"
+					href="index.html">
+					<img
+						src="favicon.png"
+						alt="Logo" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</a>
+					
+			Sri Kalyanathissa Vidyalaya
+		</a>
+
+				<div
+					class="collapse navbar-collapse"
+					id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#heroCarousel"
+								><i class="fas fa-home me-1"></i> Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="about.html"
+								><i class="fas fa-info-circle me-1"></i> About</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#gallery"
+								><i class="fas fa-image me-1"></i> Gallery</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#announcements"
+								><i class="fas fa-bullhorn me-1"></i> Announcements</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#school-profile"
+								><i class="fas fa-school me-1"></i> School Profile</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#staff"
+								><i class="fas fa-users me-1"></i> Staff</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="test.html"
+								><i class="fas fa-envelope me-1"></i> Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Main Content -->
+		<div
+			class="main-content"
+			style="margin-top: 80px">
+			<div class="container">
+				<!-- Page Title -->
+				<div class="page-title">
+					<h1>Photo Gallery</h1>
+					<p>Capturing memories and moments from our school life</p>
+				</div>
+
+				<!-- Filter Buttons -->
+				<div class="filter-buttons">
+					<button
+						class="filter-btn active"
+						data-filter="all">
+						All Photos
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="events">
+						School Events
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="sports">
+						Sports
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="academics">
+						Academics
+					</button>
+					<button
+						class="filter-btn"
+						data-filter="cultural">
+						Cultural
+					</button>
+				</div>
+
+				<!-- Gallery Grid -->
+				<div
+					class="gallery-grid"
+					id="galleryGrid">
+					<!-- Gallery Card 1 -->
+					<div
+						class="gallery-card"
+						data-category="events">
+						<img
+							src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop"
+							alt="Annual Day Celebration" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Annual Day Celebration</h5>
+							<p class="gallery-card-text">
+								Students performing cultural dances and showcasing their talents
+								during our grand annual day celebration.
+							</p>
+							<div class="gallery-card-date">March 15, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 2 -->
+					<div
+						class="gallery-card"
+						data-category="sports">
+						<img
+							src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+							alt="Sports Day" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Inter-House Sports Meet</h5>
+							<p class="gallery-card-text">
+								Exciting athletic competitions and team spirit showcased during
+								our annual sports day.
+							</p>
+							<div class="gallery-card-date">February 20, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 3 -->
+					<div
+						class="gallery-card"
+						data-category="academics">
+						<img
+							src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop"
+							alt="Science Exhibition" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Science Exhibition</h5>
+							<p class="gallery-card-text">
+								Students presenting innovative science projects and experiments
+								at our annual science fair.
+							</p>
+							<div class="gallery-card-date">January 28, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 4 -->
+					<div
+						class="gallery-card"
+						data-category="cultural">
+						<img
+							src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop"
+							alt="Cultural Festival" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Cultural Festival</h5>
+							<p class="gallery-card-text">
+								Celebrating diversity through music, dance, and art performances
+								by our talented students.
+							</p>
+							<div class="gallery-card-date">December 12, 2023</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 5 -->
+					<div
+						class="gallery-card"
+						data-category="events">
+						<img
+							src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=300&fit=crop"
+							alt="Graduation Ceremony" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Graduation Ceremony</h5>
+							<p class="gallery-card-text">
+								Proud moments as our students receive their diplomas and
+								celebrate their achievements.
+							</p>
+							<div class="gallery-card-date">April 10, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 6 -->
+					<div
+						class="gallery-card"
+						data-category="academics">
+						<img
+							src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop"
+							alt="Library Session" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Library Reading Session</h5>
+							<p class="gallery-card-text">
+								Students engaged in reading and learning in our well-equipped
+								library facility.
+							</p>
+							<div class="gallery-card-date">March 05, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 7 -->
+					<div
+						class="gallery-card"
+						data-category="sports">
+						<img
+							src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop"
+							alt="Basketball Tournament" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Basketball Championship</h5>
+							<p class="gallery-card-text">
+								Intense basketball matches between different houses showcasing
+								teamwork and sportsmanship.
+							</p>
+							<div class="gallery-card-date">February 14, 2024</div>
+						</div>
+					</div>
+
+					<!-- Gallery Card 8 -->
+					<div
+						class="gallery-card"
+						data-category="cultural">
+						<img
+							src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=400&h=300&fit=crop"
+							alt="Music Concert" />
+						<div class="gallery-card-body">
+							<h5 class="gallery-card-title">Music Concert</h5>
+							<p class="gallery-card-text">
+								Beautiful musical performances by our school orchestra and choir
+								groups.
+							</p>
+							<div class="gallery-card-date">November 22, 2023</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container notranslate">
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Sri Kalyanathissa vidyalaya</h3>
+						<p>64J8+57P, Batapola<br />Galle, Sri Lanka</p>
+					</div>
+					<div class="col-md-4">
+						<h3>Quick Links</h3>
+						<ul class="list-unstyled">
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#programs">Programs</a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h3>Connect With Us</h3>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mt-4 mb-4"
+					style="border-color: rgba(255, 255, 255, 0.1)" />
+				<div class="row">
+					<div class="col-12 text-center">
+						<p class="mb-0 notranslate">
+							&copy; <span id="copyright-year"></span> Sri Kalyana Thissa
+							Vidyalaya. All Rights Reserved. Design and Develop by
+							<a
+								href="https://github.com/ShanudhaTirosh"
+								target="_blank"
+								style="text-decoration: none; color: inherit"
+								>Shanudha Tirosh</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Update copyright year automatically
+			document.getElementById("copyright-year").textContent =
+				new Date().getFullYear();
+
+			// Scroll to Top Button Functionality
+			document.addEventListener("DOMContentLoaded", function () {
+				const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+				// Show button when scrolling down
+				window.addEventListener("scroll", function () {
+					if (
+						document.body.scrollTop > 20 ||
+						document.documentElement.scrollTop > 20
+					) {
+						scrollToTopBtn.classList.add("show");
+					} else {
+						scrollToTopBtn.classList.remove("show");
+					}
+				});
+			});
+
+			// Scroll to top function
+			function topFunction() {
+				// For modern browsers
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+
+				// For older browsers fallback
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+			// Language Toggle Button Functionality
+			let currentLang = "en";
+			document.getElementById("translate-btn").addEventListener("click", () => {
+				const select = document.querySelector("select.goog-te-combo");
+				const btnText = document.getElementById("translate-btn-text");
+
+				if (!select) {
+					alert("Google Translate is still loading. Please try again shortly.");
+					return;
+				}
+
+				if (currentLang === "en") {
+					select.value = "si";
+					btnText.textContent = "Switch to English";
+					currentLang = "si";
+				} else {
+					select.value = "en";
+					btnText.textContent = "Switch to Sinhala";
+					currentLang = "en";
+				}
+
+				select.dispatchEvent(new Event("change"));
+			});
+
+			// Hide Google Translate banner and body margin
+			document.addEventListener("DOMContentLoaded", function () {
+				// Hide Google Translate elements
+				const style = document.createElement("style");
+				style.textContent = `
+			body .goog-te-banner-frame.skiptranslate,
+			body .goog-te-gadget {
+				display: none !important;
+			}
+			body {
+				top: 0px !important;
+			}
+		`;
+				document.head.appendChild(style);
+			});
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const navbarToggler = document.querySelector(".navbar-toggler");
+				const navbarCollapse = document.getElementById("navbarNav");
+
+				navbarToggler.addEventListener("click", function () {
+					const isOpen = navbarCollapse.classList.contains("show");
+					const bsCollapse =
+						bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+					if (isOpen) {
+						bsCollapse.hide();
+					} else {
+						bsCollapse.show();
+					}
+				});
+
+				// Also close navbar if click outside
+				document.addEventListener("click", function (event) {
+					const isClickInside =
+						navbarCollapse.contains(event.target) ||
+						navbarToggler.contains(event.target);
+					if (!isClickInside && navbarCollapse.classList.contains("show")) {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						bsCollapse.hide();
+					}
+				});
+
+				// Close when link is clicked
+				document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+					link.addEventListener("click", function () {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						if (navbarCollapse.classList.contains("show")) {
+							bsCollapse.hide();
+						}
+					});
+				});
+			});
+		</script>
+		<script>
+			// Gallery Filter Functionality
+			document.addEventListener("DOMContentLoaded", function () {
+				const filterButtons = document.querySelectorAll(".filter-btn");
+				const galleryCards = document.querySelectorAll(".gallery-card");
+
+				filterButtons.forEach((button) => {
+					button.addEventListener("click", function () {
+						// Remove active class from all buttons
+						filterButtons.forEach((btn) => btn.classList.remove("active"));
+						// Add active class to clicked button
+						this.classList.add("active");
+
+						const filterValue = this.getAttribute("data-filter");
+
+						galleryCards.forEach((card) => {
+							if (
+								filterValue === "all" ||
+								card.getAttribute("data-category") === filterValue
+							) {
+								card.style.display = "block";
+								card.style.animation = "fadeInUp 0.6s ease forwards";
+							} else {
+								card.style.display = "none";
+							}
+						});
+					});
+				});
+
+				// Image Modal (Optional Enhancement)
+				galleryCards.forEach((card) => {
+					card.addEventListener("click", function () {
+						const img = this.querySelector("img");
+						const title = this.querySelector(".gallery-card-title").textContent;
+
+						// Create modal for full-size image view
+						const modal = document.createElement("div");
+						modal.className = "modal fade";
+						modal.innerHTML = `
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title text-white">${title}</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="${img.src}" class="img-fluid rounded" style="max-height: 70vh;">
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+						document.body.appendChild(modal);
+						const bsModal = new bootstrap.Modal(modal);
+						bsModal.show();
+
+						modal.addEventListener("hidden.bs.modal", function () {
+							document.body.removeChild(modal);
+						});
+					});
+				});
+			});
+		</script>
+		<!-- Add before </body> -->
+	</body>
+</html>

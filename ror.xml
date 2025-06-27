@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://skv-sch.github.io/contact.html</title>
+  <link>https://skv-sch.github.io/contact.html</link>
+
+<item>
+     <link>https://skv-sch.github.io/contact.html</link>
+     <title>Contact SKV School - Sri Kalyanathissa Vidyalaya</title>
+     <description>Contact Sri Kalyanathissa Vidyalaya, Batapola. Get in touch with our school administration, admissions office, or send us your inquiries. We're here to help.</description>
+     <ror:updatePeriod>always</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://skv-sch.github.io/index.html</link>
+     <title>Sri Kalyanathissa College | Batapola, Sri Lanka</title>
+     <description>Discover Sri Kalyanathissa College in Batapola, Galle — a leading school in Sri Lanka for Grades 1–11 with academic and cultural excellence.</description>
+     <ror:updatePeriod>always</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://skv-sch.github.io/about.html</link>
+     <title>About SKV School - Sri Kalyanathissa Vidyalaya</title>
+     <description>Learn about Sri Kalyanathissa Vidyalaya, established in 1974 in Batapola, Galle District. Discover our mission, vision, values and rich educational heritage serving over 1,385 students.</description>
+     <ror:updatePeriod>always</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

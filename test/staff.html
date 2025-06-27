@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our dedicated teaching staff at Sri Kalyanathissa Vidyalaya. Experienced educators committed to nurturing young minds with traditional values and modern education.">
+    <meta name="keywords" content="Sri Kalyanathissa Vidyalaya, SKV School, teaching staff, teachers, education, Batapola, Galle">
+    <meta name="author" content="Sri Kalyanathissa Vidyalaya">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Teaching Staff - Sri Kalyanathissa Vidyalaya">
+    <meta property="og:description" content="Meet our dedicated teaching staff committed to providing quality education with traditional values and modern techniques.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skv-sch.github.io/staff.html">
+    <meta property="og:image" content="https://skv-sch.github.io/assets/images/school-building.jpg">
+    <meta property="og:site_name" content="Sri Kalyanathissa Vidyalaya">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teaching Staff - Sri Kalyanathissa Vidyalaya">
+    <meta name="twitter:description" content="Meet our dedicated teaching staff committed to providing quality education.">
+    <meta name="twitter:image" content="https://skv-sch.github.io/assets/images/school-building.jpg">
+    
+    <title>Teaching Staff - Sri Kalyanathissa Vidyalaya</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --light-bg: #f8f9fa;
+            --text-dark: #333333;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            background-color: var(--primary-color) !important;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        
+        .navbar-toggler {
+            border-color: var(--secondary-color);
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Staff Grid */
+        .staff-section {
+            padding: 5rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .staff-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+        
+        .staff-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .staff-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .staff-info {
+            padding: 1.5rem;
+        }
+        
+        .staff-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .staff-position {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .staff-department {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .staff-qualifications {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .staff-experience {
+            background-color: var(--light-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        /* Department Filter */
+        .filter-section {
+            padding: 2rem 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 0.5rem 1.5rem;
+            margin: 0.25rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: #bbb;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .staff-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        /* Loading Animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Sri Kalyanathissa Vidyalaya",
+        "url": "https://skv-sch.github.io",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Batapola",
+            "addressLocality": "Galle",
+            "addressCountry": "LK"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+94-91-2234567",
+            "contactType": "customer service"
+        },
+        "employee": [
+            {
+                "@type": "Person",
+                "name": "Mr. K.A. Wijeratne",
+                "jobTitle": "Principal",
+                "worksFor": {
+                    "@type": "EducationalOrganization",
+                    "name": "Sri Kalyanathissa Vidyalaya"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>SKV School
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="staff.html">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prefect.html">Prefects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="fade-in">Our Teaching Staff</h1>
+            <p class="fade-in">Meet our dedicated educators who are committed to nurturing young minds with traditional values and modern education techniques</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <button class="filter-btn active" data-filter="all">All Staff</button>
+            <button class="filter-btn" data-filter="administration">Administration</button>
+            <button class="filter-btn" data-filter="primary">Primary</button>
+            <button class="filter-btn" data-filter="secondary">Secondary</button>
+            <button class="filter-btn" data-filter="special">Special Subjects</button>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="staff-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Dedicated Team</h2>
+                <p class="text-muted">Experienced educators shaping the future of Sri Lanka</p>
+            </div>
+            
+            <div class="row" id="staff-grid">
+                <!-- Principal -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="administration">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mr. K.A. Wijeratne</h4>
+                            <div class="staff-position">Principal</div>
+                            <div class="staff-department">School Administration</div>
+                            <div class="staff-qualifications">B.Ed (Hons), M.Ed, Dip. in Educational Management</div>
+                            <div class="staff-experience">25+ Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vice Principal -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="administration">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mrs. S.M. Fernando</h4>
+                            <div class="staff-position">Vice Principal</div>
+                            <div class="staff-department">School Administration</div>
+                            <div class="staff-qualifications">B.A (Hons), Dip. in Education, M.Ed</div>
+                            <div class="staff-experience">20+ Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior Teacher - Mathematics -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="secondary">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mr. A.B. Perera</h4>
+                            <div class="staff-position">Senior Teacher</div>
+                            <div class="staff-department">Mathematics Department</div>
+                            <div class="staff-qualifications">B.Sc (Mathematics), Dip. in Education</div>
+                            <div class="staff-experience">18 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- English Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="secondary">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Miss R.D. Silva</h4>
+                            <div class="staff-position">Teacher</div>
+                            <div class="staff-department">English Department</div>
+                            <div class="staff-qualifications">B.A (English), TESOL Certificate</div>
+                            <div class="staff-experience">12 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="secondary">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mr. P.K. Rajapaksa</h4>
+                            <div class="staff-position">Teacher</div>
+                            <div class="staff-department">Science Department</div>
+                            <div class="staff-qualifications">B.Sc (Physics), Dip. in Education</div>
+                            <div class="staff-experience">15 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="primary">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mrs. N.K. Jayasinghe</h4>
+                            <div class="staff-position">Primary Teacher</div>
+                            <div class="staff-department">Primary Section</div>
+                            <div class="staff-qualifications">Dip. in Primary Education, B.Ed</div>
+                            <div class="staff-experience">14 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="special">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mr. C.L. Dissanayake</h4>
+                            <div class="staff-position">ICT Teacher</div>
+                            <div class="staff-department">Information Technology</div>
+                            <div class="staff-qualifications">B.Sc (Computer Science), Dip. in Education</div>
+                            <div class="staff-experience">10 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="special">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mrs. M.A. Kumari</h4>
+                            <div class="staff-position">Music Teacher</div>
+                            <div class="staff-department">Arts Department</div>
+                            <div class="staff-qualifications">Dip. in Music, B.A (Fine Arts)</div>
+                            <div class="staff-experience">8 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Teacher -->
+                <div class="col-lg-4 col-md-6 staff-item fade-in" data-category="special">
+                    <div class="staff-card">
+                        <div class="staff-image">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h4>Mr. T.B. Gunasekara</h4>
+                            <div class="staff-position">Sports Teacher</div>
+                            <div class="staff-department">Physical Education</div>
+                            <div class="staff-qualifications">Dip. in Physical Education, B.Sc (Sports Science)</div>
+                            <div class="staff-experience">16 Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>Sri Kalyanathissa Vidyalaya</h5>
+                    <p>Founded in 1974, our school has been a beacon of knowledge and culture in Sri Lanka. We combine traditional values with modern education techniques.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="prefect.html">Prefects</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Batapola, Galle District</li>
+                        <li><i class="fas fa-phone me-2"></i>+94 91 2234567</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@skvschool.lk</li>
+                        <li><i class="fas fa-clock me-2"></i>Mon - Fri: 7:30 AM - 1:30 PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Recent News</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Annual Prize Giving Ceremony</a></li>
+                        <li><a href="#" class="text-muted">Leadership Training Program</a></li>
+                        <li><a href="#" class="text-muted">Inter-House Science Expo</a></li>
+                        <li><a href="#" class="text-muted">New Library Books Added</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sri Kalyanathissa Vidyalaya. All rights reserved. | Designed with ❤️ for Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const staffItems = document.querySelectorAll('.staff-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    staffItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            item.classList.add('fade-in');
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all staff cards
+            document.querySelectorAll('.staff-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

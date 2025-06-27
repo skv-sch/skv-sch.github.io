@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Our School Prefects - Sri kalyanathissa vidyalaya</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<!-- Font Awesome for icons -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			rel="stylesheet" />
+
+		<!-- Bootstrap Icons -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+			rel="stylesheet" />
+
+		<!-- Custom CSS -->
+		<style>
+			:root {
+				--primary-gradient: linear-gradient(135deg, #f4f7f3 0%, #fbfbfc 100%);
+				--glass-bg: rgba(255, 255, 255, 0.1);
+				--glass-border: rgba(255, 255, 255, 0.2);
+				--text-primary: #2c3e50;
+				--text-secondary: #6c757d;
+				--timeline-color: #f093fb;
+				--primary-blue: #1a75ff;
+				--primary-green: #00a65a;
+				--primary-gold: #ffd700;
+				--neutral-gray: #f8f9fa;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background: var(--primary-gradient);
+				min-height: 100vh;
+				position: relative;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+				pointer-events: none;
+				z-index: -1;
+			}
+
+			/* Glass Effect Components */
+			.glass-card {
+				background: var(--glass-bg);
+				backdrop-filter: blur(10px);
+				border: 1px solid var(--glass-border);
+				border-radius: 20px;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			.glass-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+				border-color: rgba(255, 255, 255, 0.3);
+			}
+
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+
+			.navbar {
+				transition: background 0.3s ease;
+			}
+
+			.navbar.scrolled {
+				background: rgba(255, 255, 255, 0.95) !important;
+			}
+
+			.navbar-brand img {
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.nav-link {
+				position: relative;
+				padding: 5px 0;
+			}
+
+			.nav-link::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-blue);
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
+			}
+
+			/* Main Content */
+			.main-content {
+				padding: 6rem 0 4rem;
+			}
+
+			.page-title {
+				text-align: center;
+				margin-bottom: 4rem;
+			}
+
+			.page-title h1 {
+				color: rgb(0, 0, 0);
+				font-weight: 700;
+				font-size: 3rem;
+				text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+				margin-bottom: 1rem;
+			}
+
+			.page-title p {
+				color: rgba(0, 0, 0, 0.8);
+				font-size: 1.2rem;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+
+			/* Timeline Styles */
+			.timeline {
+				position: relative;
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 2rem 0;
+			}
+
+			.timeline::after {
+				content: "";
+				position: absolute;
+				width: 4px;
+				background: linear-gradient(to bottom, var(--timeline-color), #667eea);
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -2px;
+				border-radius: 2px;
+				box-shadow: 0 0 20px rgba(240, 147, 251, 0.5);
+			}
+
+			.timeline-item {
+				position: relative;
+				background-color: transparent;
+				width: 50%;
+				padding: 2rem;
+				animation: fadeInUp 0.6s ease forwards;
+				opacity: 0;
+			}
+
+			.timeline-item:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+			.timeline-item:nth-child(2) {
+				animation-delay: 0.3s;
+			}
+			.timeline-item:nth-child(3) {
+				animation-delay: 0.5s;
+			}
+			.timeline-item:nth-child(4) {
+				animation-delay: 0.7s;
+			}
+
+			.timeline-item.left {
+				left: 0;
+			}
+
+			.timeline-item.right {
+				left: 50%;
+			}
+
+			.timeline-item::after {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: -10px;
+				background: linear-gradient(45deg, var(--timeline-color), #667eea);
+				border: 3px solid rgb(0, 0, 0);
+				top: 50%;
+				border-radius: 50%;
+				z-index: 1;
+				transform: translateY(-50%);
+				box-shadow: 0 0 15px rgba(240, 147, 251, 0.7);
+			}
+
+			.timeline-item.right::after {
+				left: -10px;
+			}
+
+			.timeline-content {
+				position: relative;
+				border-radius: 20px;
+				padding: 2rem;
+			}
+
+			.timeline-year {
+				position: absolute;
+				top: -15px;
+				left: 30px;
+				background: linear-gradient(45deg, var(--timeline-color), #667eea);
+				color: rgb(0, 0, 0);
+				padding: 0.5rem 1.5rem;
+				border-radius: 25px;
+				font-weight: 700;
+				font-size: 1rem;
+				box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.timeline-title {
+				color: rgb(0, 0, 0);
+				font-weight: 600;
+				font-size: 1.5rem;
+				margin-bottom: 1.5rem;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+				margin-top: 1rem;
+			}
+
+			.prefect-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				margin-top: 1rem;
+			}
+
+			.prefect-card {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 15px;
+				padding: 1.5rem;
+				text-align: center;
+				transition: all 0.3s ease;
+				backdrop-filter: blur(5px);
+			}
+
+			.prefect-card:hover {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: rgba(255, 255, 255, 0.3);
+				transform: translateY(-3px);
+			}
+
+			.prefect-photo {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin: 0 auto 1rem;
+				border: 3px solid rgba(255, 255, 255, 0.3);
+				transition: all 0.3s ease;
+			}
+
+			.prefect-card:hover .prefect-photo {
+				transform: scale(1.1);
+				border-color: rgba(255, 255, 255, 0.6);
+			}
+
+			.prefect-name {
+				color: rgb(0, 0, 0);
+				font-weight: 600;
+				font-size: 1.1rem;
+				margin-bottom: 0.5rem;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.prefect-position {
+				color: rgba(0, 0, 0, 0.8);
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+
+			.prefects-badge {
+				background: linear-gradient(45deg, #f093fb, #f5576c);
+				color: rgb(247, 15, 15);
+				padding: 0.25rem 0.75rem;
+				border-radius: 15px;
+				font-size: 0.8rem;
+				font-weight: 600;
+				margin-top: 0.5rem;
+				display: inline-block;
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Mobile Responsiveness */
+			@media screen and (max-width: 768px) {
+				.timeline::after {
+					left: 20px;
+				}
+
+				.timeline-item {
+					width: 100%;
+					padding-left: 4rem;
+					padding-right: 1rem;
+				}
+
+				.timeline-item.right {
+					left: 0%;
+				}
+
+				.timeline-item::after {
+					left: 10px;
+				}
+
+				.timeline-year {
+					left: 20px;
+					font-size: 0.9rem;
+					padding: 0.4rem 1rem;
+				}
+
+				.page-title h1 {
+					font-size: 2.5rem;
+				}
+
+				.main-content {
+					padding: 4rem 0 2rem;
+				}
+
+				.prefect-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			/* Animation Classes */
+			@keyframes fadeInUp {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* Smooth Scroll */
+			html {
+				scroll-behavior: smooth;
+			}
+
+			/* Special Effects */
+			.sparkle {
+				position: relative;
+				overflow: hidden;
+			}
+
+			.sparkle::before {
+				content: "";
+				position: absolute;
+				top: -50%;
+				left: -50%;
+				width: 200%;
+				height: 200%;
+				background: linear-gradient(
+					45deg,
+					transparent,
+					rgba(255, 255, 255, 0.1),
+					transparent
+				);
+				transform: rotate(45deg);
+				animation: sparkle 3s infinite;
+			}
+
+			@keyframes sparkle {
+				0% {
+					transform: translateX(-100%) translateY(-100%) rotate(45deg);
+				}
+				100% {
+					transform: translateX(100%) translateY(100%) rotate(45deg);
+				}
+			}
+
+			/* Staff Members - Base styles used by prefects */
+			.staff-card {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.staff-image {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				margin-bottom: 15px;
+				border: 5px solid var(--primary-blue);
+				transition: transform 0.3s ease;
+			}
+
+			.staff-card:hover .staff-image {
+				transform: scale(1.1);
+			}
+
+			/* Prefect Badge */
+			.prefect-badge {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: var(--primary-gold);
+				padding: 5px 10px;
+				border-radius: 15px;
+				font-size: 0.8em;
+				color: #333;
+			}
+
+			/* Fade-in animation */
+			.fade-in {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+
+			.fade-in.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* Hidden class for show/hide functionality */
+			.hidden {
+				display: none;
+			}
+
+			/* Social icons styling */
+			.social-icons a {
+				color: var(--primary-blue);
+				margin: 0 10px;
+				font-size: 24px;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons a:hover {
+				color: var(--primary-gold);
+			}
+
+			/* Button styling */
+			.notranslate {
+				translate: no !important;
+				--primary-blue: #1a75ff;
+				--primary-green: #00a65a;
+				--primary-gold: #ffd700;
+				--neutral-gray: #f8f9fa;
+			}
+
+			/* Footer Styles */
+			footer {
+				background: #333;
+				color: white;
+				padding: 50px 0;
+			}
+
+			footer h3 {
+				margin-bottom: 20px;
+				color: white;
+			}
+
+			footer p {
+				color: rgba(255, 255, 255, 0.8);
+				line-height: 1.6;
+			}
+
+			footer ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			footer ul li {
+				margin-bottom: 8px;
+			}
+
+			footer ul li a {
+				color: rgba(255, 255, 255, 0.8);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			footer ul li a:hover {
+				color: var(--primary-gold);
+			}
+
+			.social-icons a {
+				color: white;
+				margin: 0 10px;
+				font-size: 24px;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons a:hover {
+				color: var(--primary-gold);
+			}
+
+			footer hr {
+				border-color: rgba(255, 255, 255, 0.1);
+				margin: 30px 0;
+			}
+
+			.notranslate {
+				translate: no !important;
+			}
+
+			/* Scroll to Top Button */
+			.scroll-to-top-btn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				border: none;
+				outline: none;
+				background-color: var(--primary-blue);
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				font-size: 18px;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+				justify-content: center;
+			}
+
+			.scroll-to-top-btn:hover {
+				background-color: #0056b3;
+				transform: translateY(-3px);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+			}
+
+			.scroll-to-top-btn.show {
+				display: flex;
+			}
+
+			/* Language Toggle Button */
+			.skv-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 14px 24px;
+				font-size: 1rem;
+				font-weight: bold;
+				color: white;
+				background: linear-gradient(135deg, #00c3ff, #fd4eff);
+				border: none;
+				border-radius: 12px;
+				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2),
+					inset 0 20px 30px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			}
+
+			.skv-btn:hover {
+				background: linear-gradient(135deg, #fd4eff, #00c3ff);
+				transform: translateY(-2px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+					inset 0 0 15px rgba(255, 255, 255, 0.3);
+			}
+
+			.skv-btn:active {
+				transform: scale(0.97);
+				box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+					0 4px 10px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Mobile Responsive */
+			@media only screen and (max-width: 768px) {
+				footer {
+					padding: 30px 0;
+				}
+
+				.scroll-to-top-btn {
+					bottom: 15px;
+					right: 15px;
+					width: 40px;
+					height: 40px;
+					padding: 12px;
+					font-size: 16px;
+				}
+
+				.social-icons a {
+					font-size: 20px;
+					margin: 0 8px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav
+			class="navbar navbar-expand-lg navbar-light fixed-top glass notranslate">
+			<div class="container">
+				<a
+					class="navbar-brand"
+					href="#">
+					<img
+						src="favicon.png"
+						alt="Sri Kalyanathissa Vidyalaya Logo"
+						width="50"
+						height="50"
+						loading="lazy"
+						class="d-inline-block align-text-top" />
+					</a>
+					
+					Sri Kalyanathissa Vidyalaya
+				</a>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					id="customNavbarToggler">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div
+					class="collapse navbar-collapse"
+					id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html"
+								><i class="fas fa-home me-1"></i> Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="about.html"
+								><i class="fas fa-info-circle me-1"></i> About</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#gallery"
+								><i class="fas fa-image me-1"></i> Gallery</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#announcements"
+								><i class="fas fa-bullhorn me-1"></i> Announcements</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#school-profile"
+								><i class="fas fa-school me-1"></i> School Profile</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#staff"
+								><i class="fas fa-users me-1"></i> Staff</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="test.html"
+								><i class="fas fa-envelope me-1"></i> Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="container">
+				<!-- Page Title -->
+				<div class="page-title">
+					<h1>Our School Prefects</h1>
+					<p>
+						Celebrating our student leaders who exemplify excellence, integrity,
+						and service. These outstanding individuals have been chosen to
+						represent and lead their fellow students.
+					</p>
+				</div>
+
+				<!-- Timeline -->
+				<div class="timeline">
+					<!-- 2024/25 Academic Year -->
+					<div class="timeline-item left">
+						<div class="timeline-content glass-card sparkle">
+							<div class="timeline-year">2024/25</div>
+							<h3 class="timeline-title">
+								<i class="bi bi-trophy me-2"></i>
+								Current Prefects
+							</h3>
+							<div class="prefect-grid">
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+										alt="Head Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Alex Johnson</h4>
+									<p class="prefect-position">Head Prefect</p>
+									<span class="prefect-badge">Senior Leader</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1494790108755-2616b68c3c9b?w=100&h=100&fit=crop&crop=face"
+										alt="Deputy Head Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Emma Davis</h4>
+									<p class="prefect-position">Deputy Head Prefect</p>
+									<span class="prefect-badge">Deputy Leader</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+										alt="Academic Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Michael Chen</h4>
+									<p class="prefect-position">Academic Prefect</p>
+									<span class="prefect-badge">Academic</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+										alt="Sports Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Sarah Wilson</h4>
+									<p class="prefect-position">Sports Prefect</p>
+									<span class="prefect-badge">Athletics</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
+										alt="Arts Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">David Brown</h4>
+									<p class="prefect-position">Arts Prefect</p>
+									<span class="prefect-badge">Creative Arts</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face"
+										alt="Community Service Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Lisa Martinez</h4>
+									<p class="prefect-position">Community Service</p>
+									<span class="prefect-badge">Service</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2023/24 Academic Year -->
+					<div class="timeline-item right">
+						<div class="timeline-content glass-card">
+							<div class="timeline-year">2023/24</div>
+							<h3 class="timeline-title">
+								<i class="bi bi-star me-2"></i>
+								Previous Year Leaders
+							</h3>
+							<div class="prefect-grid">
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face"
+										alt="Former Head Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">James Anderson</h4>
+									<p class="prefect-position">Head Prefect</p>
+									<span class="prefect-badge">Alumni Leader</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face"
+										alt="Former Deputy"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Rachel Thompson</h4>
+									<p class="prefect-position">Deputy Head Prefect</p>
+									<span class="prefect-badge">Alumni Deputy</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face"
+										alt="Former Academic Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Kevin Lee</h4>
+									<p class="prefect-position">Academic Prefect</p>
+									<span class="prefect-badge">Alumni Scholar</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face"
+										alt="Former Sports Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Maya Patel</h4>
+									<p class="prefect-position">Sports Prefect</p>
+									<span class="prefect-badge">Alumni Athlete</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2022/23 Academic Year -->
+					<div class="timeline-item left">
+						<div class="timeline-content glass-card">
+							<div class="timeline-year">2022/23</div>
+							<h3 class="timeline-title">
+								<i class="bi bi-gem me-2"></i>
+								Distinguished Alumni
+							</h3>
+							<div class="prefect-grid">
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+										alt="Alumni Head Prefect"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Thomas Garcia</h4>
+									<p class="prefect-position">Head Prefect</p>
+									<span class="prefect-badge">Distinguished Alumni</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1494790108755-2616b68c3c9b?w=100&h=100&fit=crop&crop=face"
+										alt="Alumni Deputy"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Sophie Roberts</h4>
+									<p class="prefect-position">Deputy Head Prefect</p>
+									<span class="prefect-badge">Distinguished Alumni</span>
+								</div>
+								<div class="prefect-card">
+									<img
+										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+										alt="Alumni Academic"
+										class="prefect-photo" />
+									<h4 class="prefect-name">Ryan Kim</h4>
+									<p class="prefect-position">Academic Prefect</p>
+									<span class="prefect-badge">Distinguished Alumni</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Legacy Section -->
+					<div class="timeline-item right">
+						<div class="timeline-content glass-card">
+							<div class="timeline-year">Legacy</div>
+							<h3 class="timeline-title">
+								<i class="bi bi-heart me-2"></i>
+								Our Prefect Tradition
+							</h3>
+							<div style="text-align: center; padding: 2rem">
+								<div
+									style="
+										background: rgba(255, 255, 255, 0.1);
+										border-radius: 15px;
+										padding: 2rem;
+										margin-bottom: 1.5rem;
+									">
+									<i
+										class="bi bi-award"
+										style="
+											font-size: 3rem;
+											color: var(--timeline-color);
+											margin-bottom: 1rem;
+										"></i>
+									<h4 style="color: white; margin-bottom: 1rem">
+										Excellence in Leadership
+									</h4>
+									<p
+										style="
+											color: rgba(0, 0, 0, 0.8);
+											font-size: 1rem;
+											line-height: 1.6;
+										">
+										For over two decades, our prefect system has been the
+										cornerstone of student leadership at SKV School. These
+										exceptional individuals continue to inspire and lead by
+										example, fostering a culture of academic excellence,
+										community service, and personal growth.
+									</p>
+								</div>
+								<div
+									style="
+										display: grid;
+										grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+										gap: 1rem;
+										margin-top: 2rem;
+									">
+									<div style="text-align: center">
+										<div
+											style="
+												color: var(--timeline-color);
+												font-size: 2rem;
+												font-weight: bold;
+											">
+											150+
+										</div>
+										<div style="color: rgba(0, 0, 0, 0.8); font-size: 0.9rem">
+											Alumni Prefects
+										</div>
+									</div>
+									<div style="text-align: center">
+										<div
+											style="
+												color: var(--timeline-color);
+												font-size: 2rem;
+												font-weight: bold;
+											">
+											25+
+										</div>
+										<div style="color: rgba(0, 0, 0, 0.8); font-size: 0.9rem">
+											Years of Tradition
+										</div>
+									</div>
+									<div style="text-align: center">
+										<div
+											style="
+												color: var(--timeline-color);
+												font-size: 2rem;
+												font-weight: bold;
+											">
+											100%
+										</div>
+										<div style="color: rgba(0, 0, 0, 0.8); font-size: 0.9rem">
+											Commitment
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section
+			id="prefects"
+			class="py-5 bg-light">
+			<div class="container">
+				<h2 class="text-center mb-5 fade-in">School Prefects</h2>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="staff-card fade-in">
+							<div class="position-relative">
+								<img
+									src="12.jpg"
+									alt="Head Prefect"
+									class="staff-image" />
+								<span class="prefect-badge">Head Prefect</span>
+							</div>
+							<h4>John Silva</h4>
+							<p>Grade 12</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="staff-card fade-in">
+							<div class="position-relative">
+								<img
+									src="12.jpg"
+									alt="Head Prefect"
+									class="staff-image" />
+								<span class="prefect-badge">Head Prefect</span>
+							</div>
+							<h4>John Silva</h4>
+							<p>Grade 12</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="staff-card fade-in">
+							<div class="position-relative">
+								<img
+									src="12.jpg"
+									alt="Head Prefect"
+									class="staff-image" />
+								<span class="prefect-badge">Head Prefect</span>
+							</div>
+							<h4>John Silva</h4>
+							<p>Grade 12</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="staff-card fade-in">
+							<div class="position-relative">
+								<img
+									src="12.jpg"
+									alt="Head Prefect"
+									class="staff-image" />
+								<span class="prefect-badge">Head Prefect</span>
+							</div>
+							<h4>John Silva</h4>
+							<p>Grade 12</p>
+						</div>
+					</div>
+					<!-- Add more prefect cards as needed -->
+					<div class="text-center mt-4">
+						<button
+							id="show-more-prefects"
+							class="btn btn-primary notranslate">
+							Show All Prefects
+						</button>
+						<button
+							id="show-less-prefects"
+							class="btn btn-secondary notranslate"
+							style="display: none">
+							Show Less Prefects
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container notranslate">
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Sri Kalyanathissa vidyalaya</h3>
+						<p>64J8+57P, Batapola<br />Galle, Sri Lanka</p>
+					</div>
+					<div class="col-md-4">
+						<h3>Quick Links</h3>
+						<ul class="list-unstyled">
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#programs">Programs</a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<h3>Connect With Us</h3>
+						<div class="social-icons">
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+				<hr
+					class="mt-4 mb-4"
+					style="border-color: rgba(255, 255, 255, 0.1)" />
+				<div class="row">
+					<div class="col-12 text-center">
+						<p class="mb-0 notranslate">
+							&copy; <span id="copyright-year"></span> Sri Kalyana Thissa
+							Vidyalaya. All Rights Reserved. Design and Develop by
+							<a
+								href="https://github.com/ShanudhaTirosh"
+								target="_blank"
+								style="text-decoration: none; color: inherit"
+								>Shanudha Tirosh</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// PREFECTS Section Show/Hide Functionality
+				const prefectCards = document.querySelectorAll("#prefects .staff-card");
+				const showMorePrefectsBtn =
+					document.getElementById("show-more-prefects");
+				const showLessPrefectsBtn =
+					document.getElementById("show-less-prefects");
+
+				// Initially hide cards beyond the first 6
+				prefectCards.forEach((card, index) => {
+					if (index >= 6) {
+						card.classList.add("hidden");
+					}
+				});
+
+				// Show all prefect cards
+				showMorePrefectsBtn.addEventListener("click", () => {
+					prefectCards.forEach((card) => card.classList.remove("hidden"));
+					showMorePrefectsBtn.style.display = "none";
+					showLessPrefectsBtn.style.display = "inline-block";
+				});
+
+				// Hide additional prefect cards (show only first 6)
+				showLessPrefectsBtn.addEventListener("click", () => {
+					prefectCards.forEach((card, index) => {
+						if (index >= 6) {
+							card.classList.add("hidden");
+						}
+					});
+					showMorePrefectsBtn.style.display = "inline-block";
+					showLessPrefectsBtn.style.display = "none";
+				});
+
+				// Fade-in animation on scroll
+				const observerOptions = {
+					threshold: 0.1,
+				};
+
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+						}
+					});
+				}, observerOptions);
+
+				document.querySelectorAll(".fade-in").forEach((element) => {
+					observer.observe(element);
+				});
+			});
+		</script>
+
+		<script>
+			// Navbar scroll effect
+			window.addEventListener("scroll", function () {
+				if (window.scrollY > 50) {
+					document.querySelector(".navbar").classList.add("scrolled");
+				} else {
+					document.querySelector(".navbar").classList.remove("scrolled");
+				}
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const toggler = document.getElementById("customNavbarToggler");
+				const navCollapse = document.getElementById("navbarNav");
+				const navLinks = navCollapse.querySelectorAll(".nav-link");
+
+				// Manual toggle on click
+				toggler.addEventListener("click", () => {
+					navCollapse.classList.contains("show")
+						? navCollapse.classList.remove("show")
+						: navCollapse.classList.add("show");
+				});
+
+				// Close on link click
+				navLinks.forEach((link) => {
+					link.addEventListener("click", () => {
+						navCollapse.classList.remove("show");
+					});
+				});
+
+				// Close when clicking outside
+				document.addEventListener("click", (event) => {
+					const isInside =
+						navCollapse.contains(event.target) ||
+						toggler.contains(event.target);
+					if (!isInside) {
+						navCollapse.classList.remove("show");
+					}
+				});
+			});
+		</script>
+		<script>
+			// Smooth scrolling
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					document.querySelector(this.getAttribute("href")).scrollIntoView({
+						behavior: "smooth",
+					});
+				});
+			});
+
+			// Form validation
+			document
+				.getElementById("contactForm")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+					// Add your form submission logic here
+					alert("Thank you for your message! We will get back to you soon.");
+					this.reset();
+				});
+
+			// Countdown timer function
+			function updateCountdown() {
+				document.querySelectorAll(".countdown").forEach((countdown) => {
+					const targetDate = new Date(countdown.dataset.date).getTime();
+					const now = new Date().getTime();
+					const difference = targetDate - now;
+
+					if (difference > 0) {
+						const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+						countdown.textContent = `${days} days until the event`;
+					} else {
+						countdown.textContent = "Event has passed";
+					}
+				});
+			}
+
+			// Update countdown every day
+			updateCountdown();
+			setInterval(updateCountdown, 86400000);
+
+			// Initialize Bootstrap components
+			const carouselElement = document.querySelector("#heroCarousel");
+			const carousel = new bootstrap.Carousel(carouselElement, {
+				interval: 5000,
+				pause: "hover",
+			});
+
+			// Update copyright year automatically
+			document.getElementById("copyright-year").textContent =
+				new Date().getFullYear();
+
+			// Scroll animations
+			const observerOptions = {
+				threshold: 0.1,
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll(".fade-in").forEach((element) => {
+				observer.observe(element);
+			});
+
+			// Achievement Counter Animation
+			function animateCounter(element) {
+				const target = parseInt(element.getAttribute("data-target"));
+				const duration = 2000; // 2 seconds
+				const steps = 50;
+				const stepValue = target / steps;
+				let current = 0;
+
+				const timer = setInterval(() => {
+					current += stepValue;
+					if (current >= target) {
+						element.textContent = target;
+						clearInterval(timer);
+					} else {
+						element.textContent = Math.floor(current);
+					}
+				}, duration / steps);
+			}
+
+			// Start counter animation when in view
+			document.addEventListener("DOMContentLoaded", function () {
+				const counters = document.querySelectorAll(".counter-number");
+				const observerOptions = {
+					threshold: 0.5, // Trigger when 50% of the element is in view
+				};
+
+				function animateCounter(counter) {
+					const target = +counter.getAttribute("data-target");
+					const duration = 2000; // 2 seconds
+					const step = target / (duration / 10); // Adjust step size based on duration
+					let count = 0;
+
+					const timer = setInterval(() => {
+						count += step;
+						if (count >= target) {
+							counter.textContent = target;
+							clearInterval(timer);
+						} else {
+							counter.textContent = Math.floor(count);
+						}
+					}, 10);
+				}
+
+				const observer = new IntersectionObserver((entries, observer) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							animateCounter(entry.target);
+							observer.unobserve(entry.target); // Stop observing after animation
+						}
+					});
+				}, observerOptions);
+
+				counters.forEach((counter) => observer.observe(counter));
+			});
+
+			// Loading Animation
+			window.addEventListener("load", () => {
+				setTimeout(() => {
+					document.querySelector(".loader").classList.add("fade-out");
+				}, 1000);
+			});
+
+			// Enhanced Scroll Animations
+			const scrollAnimations = () => {
+				const elements = document.querySelectorAll(".fade-in");
+				elements.forEach((element) => {
+					const elementTop = element.getBoundingClientRect().top;
+					const elementVisible = 150;
+					if (elementTop < window.innerHeight - elementVisible) {
+						element.classList.add("visible");
+					}
+				});
+			};
+
+			window.addEventListener("scroll", scrollAnimations);
+			scrollAnimations();
+
+			// Facility Icons Animation
+			document.querySelectorAll(".facility-icon").forEach((icon) => {
+				icon.addEventListener("mouseover", () => {
+					icon.style.transform = "rotateY(180deg)";
+					setTimeout(() => {
+						icon.style.transform = "rotateY(0deg)";
+					}, 1000);
+				});
+			});
+
+			// Newsletter Form Handler
+			document
+				.querySelector(".newsletter-form")
+				.addEventListener("submit", (e) => {
+					e.preventDefault();
+					const email = e.target.querySelector('input[type="email"]').value;
+					alert(`Thank you for subscribing with: ${email}`);
+					e.target.reset();
+				});
+
+			// Scroll to Top Script
+			let mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction();
+			};
+
+			function scrollFunction() {
+				if (
+					document.body.scrollTop > 20 ||
+					document.documentElement.scrollTop > 20
+				) {
+					mybutton.classList.add("show");
+				} else {
+					mybutton.classList.remove("show");
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				// For modern browsers
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+
+				// For older browsers fallback
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+			// Ensure the button is hidden when the page loads
+			document.addEventListener("DOMContentLoaded", function () {
+				mybutton = document.getElementById("myBtn");
+				if (mybutton) {
+					mybutton.classList.remove("show");
+				}
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const announcements = Array.from(
+					document.querySelectorAll(".announcement")
+				);
+				const showAllBtn = document.getElementById("show-all-announcements");
+				const showLessBtn = document.getElementById("show-less-announcements");
+
+				// Sort by date
+				announcements.sort(
+					(a, b) => new Date(b.dataset.date) - new Date(a.dataset.date)
+				);
+
+				// Show only first 5
+				function showLatest() {
+					announcements.forEach((el, index) => {
+						el.style.display = index < 5 ? "block" : "none";
+					});
+					showAllBtn.style.display = "inline-block";
+					showLessBtn.style.display = "none";
+				}
+
+				// Show all
+				function showAll() {
+					announcements.forEach((el) => (el.style.display = "block"));
+					showAllBtn.style.display = "none";
+					showLessBtn.style.display = "inline-block";
+				}
+
+				showLatest();
+
+				showAllBtn.addEventListener("click", showAll);
+				showLessBtn.addEventListener("click", showLatest);
+			});
+		</script>
+		<!-- Custom JS -->
+		<script>
+			// Smooth scroll for navigation links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute("href"));
+					if (target) {
+						target.scrollIntoView({
+							behavior: "smooth",
+						});
+					}
+				});
+			});
+
+			// Add loading animation
+			window.addEventListener("load", function () {
+				document.body.classList.add("loaded");
+			});
+
+			// Navbar background on scroll
+			window.addEventListener("scroll", function () {
+				const navbar = document.querySelector(".navbar");
+				if (window.scrollY > 50) {
+					navbar.style.background = "rgba(255, 255, 255, 0.15)";
+				} else {
+					navbar.style.background = "var(--glass-bg)";
+				}
+			});
+
+			// Timeline scroll animation
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: "0px 0px -50px 0px",
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = "1";
+						entry.target.style.transform = "translateY(0)";
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll(".timeline-item").forEach((item) => {
+				observer.observe(item);
+			});
+
+			// Add sparkle effect to current year
+			setInterval(() => {
+				const sparkleElements = document.querySelectorAll(".sparkle");
+				sparkleElements.forEach((element) => {
+					element.style.animationDuration = Math.random() * 2 + 2 + "s";
+				});
+			}, 3000);
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const announcements = Array.from(
+					document.querySelectorAll(".announcement")
+				);
+				const showAllBtn = document.getElementById("show-all-announcements");
+				const showLessBtn = document.getElementById("show-less-announcements");
+
+				// Sort by date
+				announcements.sort(
+					(a, b) => new Date(b.dataset.date) - new Date(a.dataset.date)
+				);
+
+				// Show only first 5
+				function showLatest() {
+					announcements.forEach((el, index) => {
+						el.style.display = index < 5 ? "block" : "none";
+					});
+					showAllBtn.style.display = "inline-block";
+					showLessBtn.style.display = "none";
+				}
+
+				// Show all
+				function showAll() {
+					announcements.forEach((el) => (el.style.display = "block"));
+					showAllBtn.style.display = "none";
+					showLessBtn.style.display = "inline-block";
+				}
+
+				showLatest();
+
+				showAllBtn.addEventListener("click", showAll);
+				showLessBtn.addEventListener("click", showLatest);
+			});
+		</script>
+
+		<script>
+			// Update copyright year automatically
+			document.getElementById("copyright-year").textContent =
+				new Date().getFullYear();
+
+			// Scroll to Top Button Functionality
+			document.addEventListener("DOMContentLoaded", function () {
+				const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+				// Show button when scrolling down
+				window.addEventListener("scroll", function () {
+					if (
+						document.body.scrollTop > 20 ||
+						document.documentElement.scrollTop > 20
+					) {
+						scrollToTopBtn.classList.add("show");
+					} else {
+						scrollToTopBtn.classList.remove("show");
+					}
+				});
+			});
+
+			// Scroll to top function
+			function topFunction() {
+				// For modern browsers
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+
+				// For older browsers fallback
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+
+			// Language Toggle Button Functionality
+			let currentLang = "en";
+			document.getElementById("translate-btn").addEventListener("click", () => {
+				const select = document.querySelector("select.goog-te-combo");
+				const btnText = document.getElementById("translate-btn-text");
+
+				if (!select) {
+					alert("Google Translate is still loading. Please try again shortly.");
+					return;
+				}
+
+				if (currentLang === "en") {
+					select.value = "si";
+					btnText.textContent = "Switch to English";
+					currentLang = "si";
+				} else {
+					select.value = "en";
+					btnText.textContent = "Switch to Sinhala";
+					currentLang = "en";
+				}
+
+				select.dispatchEvent(new Event("change"));
+			});
+
+			// Hide Google Translate banner and body margin
+			document.addEventListener("DOMContentLoaded", function () {
+				// Hide Google Translate elements
+				const style = document.createElement("style");
+				style.textContent = `
+                body .goog-te-banner-frame.skiptranslate,
+                body .goog-te-gadget {
+                    display: none !important;
+                }
+                body {                                              
+                    top: 0px !important;
+                }
+            `;
+				document.head.appendChild(style);
+			});
+		</script>
+	</body>
+</html>

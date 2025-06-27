@@ -76,7 +76,7 @@
 			content="Leading school in Galle District, Sri Lanka. Grades 1–11. Academic excellence meets culture." />
 		<meta
 			name="twitter:image"
-			content="https://skv-sch.github.io/assets/images/4.jpg" />
+			content="https://skv-sch.github.io/4.jpg" />
 
 		<!-- Favicon -->
 		<link
@@ -155,6 +155,13 @@
 				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 			}
 
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+
 			.navbar {
 				transition: background 0.3s ease;
 			}
@@ -162,11 +169,32 @@
 			.navbar.scrolled {
 				background: rgba(255, 255, 255, 0.95) !important;
 			}
+
 			.navbar-brand img {
-				width: 50px; /* Adjust the width */
-				height: 50px; /* Adjust the height */
-				object-fit: cover; /* Ensures the image fits well */
-				border-radius: 5px; /* Optional: Add rounded corners */
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.nav-link {
+				position: relative;
+				padding: 5px 0;
+			}
+
+			.nav-link::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-blue);
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
 			}
 			.glass {
 				background: rgba(255, 255, 255, 0.1);
@@ -917,12 +945,16 @@
 					class="navbar-brand"
 					href="#">
 					<img
-						src="1.png"
+						src="favicon.png"
 						alt="Sri Kalyanathissa Vidyalaya Logo"
 						width="50"
 						height="50"
 						loading="lazy"
 						class="d-inline-block align-text-top" />
+					</a>
+					
+					Sri Kalyanathissa Vidyalaya
+				</a>
 				</a>
 				<button
 					class="navbar-toggler"
@@ -945,7 +977,7 @@
 						<li class="nav-item">
 							<a
 								class="nav-link"
-								href="#about"
+								href="about.html"
 								><i class="fas fa-info-circle me-1"></i> About</a
 							>
 						</li>
@@ -980,7 +1012,7 @@
 						<li class="nav-item">
 							<a
 								class="nav-link"
-								href="#contact"
+								href="contact.html"
 								><i class="fas fa-envelope me-1"></i> Contact</a
 							>
 						</li>
@@ -1055,6 +1087,7 @@
 				<span class="carousel-control-next-icon"></span>
 			</button>
 		</div>
+
 		<!-- About Section -->
 		<section
 			id="about"
@@ -1096,6 +1129,13 @@
 						</audio>
 					</div>
 				</div>
+			</div>
+			<div class="text-center mt-4">
+				<button
+					onclick="location.href='about.html'"
+					class="btn btn-primary notranslate">
+					More About Us
+				</button>
 			</div>
 		</section>
 
@@ -1375,6 +1415,13 @@
 							</div>
 						</div>
 					</div>
+					<div class="text-center mt-4">
+						<button
+							onclick="location.href='gallery.html'"
+							class="btn btn-primary notranslate">
+							See More Gallery
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1481,6 +1528,7 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- News Section -->
 		<section
 			id="news"
@@ -1670,9 +1718,10 @@
 
 					<!-- Add more news cards -->
 				</div>
+
 				<div class="text-center mt-4">
 					<button
-						id="show-more-news"
+						onclick="location.href='news.html'"
 						class="btn btn-primary notranslate">
 						Show All News
 					</button>
@@ -1841,15 +1890,9 @@
 					<!-- Add more staff cards -->
 					<div class="text-center mt-4">
 						<button
-							id="show-more-staff"
+							onclick="location.href='staff.html'"
 							class="btn btn-primary notranslate">
 							Show All Staff
-						</button>
-						<button
-							id="show-less-staff"
-							class="btn btn-secondary notranslate"
-							style="display: none">
-							Show Less Staff
 						</button>
 					</div>
 				</div>
@@ -1914,18 +1957,11 @@
 							<p>Grade 12</p>
 						</div>
 					</div>
-					<!-- Add more prefect cards -->
 					<div class="text-center mt-4">
 						<button
-							id="show-more-prefects"
+							onclick="location.href='prefects.html'"
 							class="btn btn-primary notranslate">
-							Show All Prefects
-						</button>
-						<button
-							id="show-less-prefects"
-							class="btn btn-secondary notranslate"
-							style="display: none">
-							Show Less Prefects
+							Show All prefects
 						</button>
 					</div>
 				</div>
@@ -2350,9 +2386,6 @@
 			});
 		</script>
 		<script>
-			/* filepath: vscode-vfs://github/skv-sch/skv-sch.github.io/index.html */
-			/* Add inside a <script> tag before the closing </body> tag */
-
 			document.addEventListener("DOMContentLoaded", function () {
 				const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 

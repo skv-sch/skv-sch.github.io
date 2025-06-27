@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Our Staff Members - Sri kalyanathissa vidyalaya</title>
+
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			rel="stylesheet" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+			rel="stylesheet" />
+
+		<!-- Bootstrap Icons -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+			rel="stylesheet" />
+
+		<style>
+			:root {
+				--primary-blue: #1a75ff;
+			}
+
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+
+			.navbar {
+				transition: background 0.3s ease;
+			}
+
+			.navbar.scrolled {
+				background: rgba(255, 255, 255, 0.95) !important;
+			}
+
+			.navbar-brand img {
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.nav-link {
+				position: relative;
+				padding: 5px 0;
+			}
+
+			.nav-link::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-blue);
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
+			}
+		</style>
+		<!-- Custom CSS -->
+		<style>
+			:root {
+				--primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				--glass-bg: rgba(255, 255, 255, 0.1);
+				--glass-border: rgba(255, 255, 255, 0.2);
+				--text-primary: #2c3e50;
+				--text-secondary: #6c757d;
+				--primary-gold: #ffd700;
+				--neutral-gray: #f8f9fa;
+				--primary-green: #00a65a;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background: var(--primary-gradient);
+				min-height: 100vh;
+				position: relative;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+				pointer-events: none;
+				z-index: -1;
+			}
+
+			/* Glass Effect Components */
+			.glass-card {
+				background: var(--glass-bg);
+				backdrop-filter: blur(10px);
+				border: 1px solid var(--glass-border);
+				border-radius: 20px;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			.glass-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+				border-color: rgba(255, 255, 255, 0.3);
+			}
+
+			/* Navbar Styles */
+			.navbar {
+				background: var(--glass-bg);
+				backdrop-filter: blur(15px);
+				border-bottom: 1px solid var(--glass-border);
+				padding: 1rem 0;
+			}
+
+			.navbar-brand {
+				font-weight: 700;
+				font-size: 1.5rem;
+				color: white !important;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.navbar-nav .nav-link {
+				color: rgba(255, 255, 255, 0.9) !important;
+				font-weight: 500;
+				padding: 0.75rem 1rem !important;
+				border-radius: 10px;
+				transition: all 0.3s ease;
+				margin: 0 0.25rem;
+			}
+
+			.navbar-nav .nav-link:hover,
+			.navbar-nav .nav-link.active {
+				background: rgba(255, 255, 255, 0.2);
+				color: white !important;
+				transform: translateY(-2px);
+			}
+
+			.navbar-toggler {
+				border: none;
+				color: white;
+			}
+
+			.navbar-toggler:focus {
+				box-shadow: none;
+			}
+
+			/* Main Content */
+			.main-content {
+				padding: 6rem 0 4rem;
+			}
+
+			.page-title {
+				text-align: center;
+				margin-bottom: 4rem;
+			}
+
+			.page-title h1 {
+				color: white;
+				font-weight: 700;
+				font-size: 3rem;
+				text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+				margin-bottom: 1rem;
+			}
+
+			.page-title p {
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 1.2rem;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+
+			/* Staff Cards */
+			.staff-card {
+				height: 100%;
+				padding: 2rem;
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.staff-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.staff-card:hover::before {
+				opacity: 1;
+			}
+
+			.staff-photo {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin: 0 auto 1.5rem;
+				border: 4px solid rgba(255, 255, 255, 0.3);
+				transition: all 0.3s ease;
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+			}
+
+			.staff-card:hover .staff-photo {
+				transform: scale(1.1);
+				border-color: rgba(255, 255, 255, 0.6);
+			}
+
+			.staff-name {
+				color: white;
+				font-weight: 600;
+				font-size: 1.25rem;
+				margin-bottom: 0.5rem;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.staff-position {
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 1rem;
+				font-weight: 500;
+				margin-bottom: 1rem;
+			}
+
+			.staff-contact {
+				margin-top: 1rem;
+			}
+
+			.contact-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: rgba(255, 255, 255, 0.7);
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+				transition: color 0.3s ease;
+			}
+
+			.contact-item:hover {
+				color: white;
+			}
+
+			.contact-item i {
+				margin-right: 0.5rem;
+				width: 16px;
+			}
+
+			/* Footer Styles */
+			footer {
+				background: #333;
+				color: white;
+				padding: 50px 0;
+			}
+
+			footer h3 {
+				margin-bottom: 20px;
+				color: white;
+			}
+
+			footer p {
+				color: rgba(255, 255, 255, 0.8);
+				line-height: 1.6;
+			}
+
+			footer ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			footer ul li {
+				margin-bottom: 8px;
+			}
+
+			footer ul li a {
+				color: rgba(255, 255, 255, 0.8);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			footer ul li a:hover {
+				color: var(--primary-gold);
+			}
+
+			.social-icons a {
+				color: white;
+				margin: 0 10px;
+				font-size: 24px;
+				transition: color 0.3s ease;
+			}
+
+			.social-icons a:hover {
+				color: var(--primary-gold);
+			}
+
+			footer hr {
+				border-color: rgba(255, 255, 255, 0.1);
+				margin: 30px 0;
+			}
+
+			.notranslate {
+				translate: no !important;
+			}
+
+			/* Scroll to Top Button */
+			.scroll-to-top-btn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 30px;
+				z-index: 99;
+				border: none;
+				outline: none;
+				background-color: var(--primary-blue);
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				font-size: 18px;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				align-items: center;
+				justify-content: center;
+			}
+
+			.scroll-to-top-btn:hover {
+				background-color: #0056b3;
+				transform: translateY(-3px);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+			}
+
+			.scroll-to-top-btn.show {
+				display: flex;
+			}
+
+			/* Language Toggle Button */
+			.skv-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 14px 24px;
+				font-size: 1rem;
+				font-weight: bold;
+				color: white;
+				background: linear-gradient(135deg, #00c3ff, #fd4eff);
+				border: none;
+				border-radius: 12px;
+				box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2),
+					inset 0 20px 30px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			}
+
+			.skv-btn:hover {
+				background: linear-gradient(135deg, #fd4eff, #00c3ff);
+				transform: translateY(-2px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+					inset 0 0 15px rgba(255, 255, 255, 0.3);
+			}
+
+			.skv-btn:active {
+				transform: scale(0.97);
+				box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+					0 4px 10px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Mobile Responsive */
+			@media only screen and (max-width: 768px) {
+				footer {
+					padding: 30px 0;
+				}
+
+				.scroll-to-top-btn {
+					bottom: 15px;
+					right: 15px;
+					width: 40px;
+					height: 40px;
+					padding: 12px;
+					font-size: 16px;
+				}
+
+				.social-icons a {
+					font-size: 20px;
+					margin: 0 8px;
+				}
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.page-title h1 {
+					font-size: 2.5rem;
+				}
+
+				.main-content {
+					padding: 4rem 0 2rem;
+				}
+
+				.staff-card {
+					padding: 1.5rem;
+					margin-bottom: 2rem;
+				}
+			}
+
+			/* Animation Classes */
+			.fade-in {
+				opacity: 0;
+				transform: translateY(30px);
+				animation: fadeInUp 0.6s ease forwards;
+			}
+
+			.fade-in:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+			.fade-in:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+			.fade-in:nth-child(3) {
+				animation-delay: 0.3s;
+			}
+			.fade-in:nth-child(4) {
+				animation-delay: 0.4s;
+			}
+
+			@keyframes fadeInUp {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* Smooth Scroll */
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top glass">
+			<div class="container">
+				<a
+					class="navbar-brand"
+					href="index.html">
+					<img
+						src="favicon.png"
+						alt="Logo" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</a>
+					
+			Sri Kalyanathissa Vidyalaya
+		</a>
+
+				<div
+					class="collapse navbar-collapse"
+					id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#heroCarousel"
+								><i class="fas fa-home me-1"></i> Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="about.html"
+								><i class="fas fa-info-circle me-1"></i> About</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#gallery"
+								><i class="fas fa-image me-1"></i> Gallery</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#announcements"
+								><i class="fas fa-bullhorn me-1"></i> Announcements</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#school-profile"
+								><i class="fas fa-school me-1"></i> School Profile</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#staff"
+								><i class="fas fa-users me-1"></i> Staff</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="test.html"
+								><i class="fas fa-envelope me-1"></i> Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="container">
+				<!-- Page Title -->
+				<div class="page-title">
+					<h1>Our Staff Members</h1>
+					<p>
+						Meet our dedicated team of educators and administrators who are
+						committed to providing excellence in education and nurturing our
+						students' growth.
+					</p>
+				</div>
+
+				<!-- Staff Grid -->
+				<div class="row g-4">
+					<!-- Principal -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+								alt="Principal"
+								class="staff-photo" />
+							<h3 class="staff-name">Dr. John Smith</h3>
+							<p class="staff-position">Principal</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									principal@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4567
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Vice Principal -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1494790108755-2616b68c3c9b?w=150&h=150&fit=crop&crop=face"
+								alt="Vice Principal"
+								class="staff-photo" />
+							<h3 class="staff-name">Ms. Sarah Johnson</h3>
+							<p class="staff-position">Vice Principal</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									vice.principal@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4568
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Head of Mathematics -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+								alt="Math Teacher"
+								class="staff-photo" />
+							<h3 class="staff-name">Mr. Michael Brown</h3>
+							<p class="staff-position">Head of Mathematics</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									m.brown@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4569
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- English Teacher -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+								alt="English Teacher"
+								class="staff-photo" />
+							<h3 class="staff-name">Mrs. Emily Davis</h3>
+							<p class="staff-position">English Teacher</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									e.davis@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4570
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Science Teacher -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+								alt="Science Teacher"
+								class="staff-photo" />
+							<h3 class="staff-name">Dr. Robert Wilson</h3>
+							<p class="staff-position">Science Teacher</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									r.wilson@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4571
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Art Teacher -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face"
+								alt="Art Teacher"
+								class="staff-photo" />
+							<h3 class="staff-name">Ms. Lisa Anderson</h3>
+							<p class="staff-position">Art Teacher</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									l.anderson@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4572
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- PE Teacher -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+								alt="PE Teacher"
+								class="staff-photo" />
+							<h3 class="staff-name">Coach Mark Taylor</h3>
+							<p class="staff-position">Physical Education</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									m.taylor@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4573
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Librarian -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+								alt="Librarian"
+								class="staff-photo" />
+							<h3 class="staff-name">Mrs. Jennifer White</h3>
+							<p class="staff-position">Librarian</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									j.white@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4574
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Counselor -->
+					<div class="col-lg-4 col-md-6">
+						<div class="glass-card staff-card fade-in">
+							<img
+								src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face"
+								alt="Counselor"
+								class="staff-photo" />
+							<h3 class="staff-name">Dr. Amanda Clark</h3>
+							<p class="staff-position">School Counselor</p>
+							<div class="staff-contact">
+								<div class="contact-item">
+									<i class="bi bi-envelope"></i>
+									a.clark@skv-sch.edu
+								</div>
+								<div class="contact-item">
+									<i class="bi bi-telephone"></i>
+									+1 (555) 123-4575
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div class="row">
+						<div class="col-md-4 mb-4">
+							<h5>
+								<i class="bi bi-mortarboard-fill me-2"></i>
+								SKV School
+							</h5>
+							<p>Excellence in Education</p>
+							<p>Nurturing Future Leaders</p>
+						</div>
+						<div class="col-md-4 mb-4">
+							<h5>Contact Info</h5>
+							<p><i class="bi bi-geo-alt me-2"></i>123 Education Street</p>
+							<p><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+							<p><i class="bi bi-envelope me-2"></i>info@skv-sch.edu</p>
+						</div>
+						<div class="col-md-4 mb-4">
+							<h5>Follow Us</h5>
+							<div class="social-links">
+								<a href="#"><i class="bi bi-facebook"></i></a>
+								<a href="#"><i class="bi bi-twitter"></i></a>
+								<a href="#"><i class="bi bi-instagram"></i></a>
+								<a href="#"><i class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+					<hr
+						style="
+							border-color: rgba(255, 255, 255, 0.2);
+							margin: 2rem 0 1rem;
+						" />
+					<p>&copy; 2024 SKV School. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Custom JS -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const navbarToggler = document.querySelector(".navbar-toggler");
+				const navbarCollapse = document.getElementById("navbarNav");
+
+				// Toggle navbar on button click
+				navbarToggler.addEventListener("click", function () {
+					const isOpen = navbarCollapse.classList.contains("show");
+					const bsCollapse =
+						bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+					if (isOpen) {
+						bsCollapse.hide();
+					} else {
+						bsCollapse.show();
+					}
+				});
+
+				// Close navbar when clicking outside
+				document.addEventListener("click", function (event) {
+					const isClickInside =
+						navbarCollapse.contains(event.target) ||
+						navbarToggler.contains(event.target);
+					if (!isClickInside && navbarCollapse.classList.contains("show")) {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						bsCollapse.hide();
+					}
+				});
+
+				// Close navbar when a nav link is clicked
+				document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+					link.addEventListener("click", function () {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						if (navbarCollapse.classList.contains("show")) {
+							bsCollapse.hide();
+						}
+					});
+				});
+
+				// Add scrolled class to navbar on scroll (optional effect)
+				window.addEventListener("scroll", function () {
+					const navbar = document.querySelector(".navbar");
+					if (window.scrollY > 50) {
+						navbar.classList.add("scrolled");
+					} else {
+						navbar.classList.remove("scrolled");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

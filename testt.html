@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Navbar Component</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<!-- Font Awesome -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			rel="stylesheet" />
+
+		<style>
+			/* Navbar Specific CSS */
+			:root {
+				--primary-blue: #1a75ff;
+			}
+
+			.glass {
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			}
+
+			.navbar {
+				transition: background 0.3s ease;
+			}
+
+			.navbar.scrolled {
+				background: rgba(255, 255, 255, 0.95) !important;
+			}
+
+			.navbar-brand img {
+				width: 50px;
+				height: 50px;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+
+			.nav-link {
+				position: relative;
+				padding: 5px 0;
+			}
+
+			.nav-link::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary-blue);
+				transition: width 0.3s ease;
+			}
+
+			.nav-link:hover::after {
+				width: 100%;
+			}
+
+			/* Demo Background for Visibility */
+			body {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+			}
+
+			.demo-content {
+				margin-top: 100px;
+				padding: 50px;
+				text-align: center;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top glass">
+			<div class="container">
+				<a
+					class="navbar-brand"
+					href="index.html">
+					<img
+						src="1.png"
+						alt="Logo" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div
+					class="collapse navbar-collapse"
+					id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#heroCarousel">
+								<i class="fas fa-home me-1"></i> Home
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="about.html">
+								<i class="fas fa-info-circle me-1"></i> About
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#gallery">
+								<i class="fas fa-image me-1"></i> Gallery
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#announcements">
+								<i class="fas fa-bullhorn me-1"></i> Announcements
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#school-profile">
+								<i class="fas fa-school me-1"></i> School Profile
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="index.html#staff">
+								<i class="fas fa-users me-1"></i> Staff
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="test.html">
+								<i class="fas fa-envelope me-1"></i> Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Demo Content (for testing) -->
+		<div class="demo-content">
+			<h1>Navbar Demo</h1>
+			<p>
+				This is a demo page to showcase the navbar. Scroll down to see the
+				navbar behavior.
+			</p>
+			<div
+				style="
+					height: 2000px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				">
+				<p>Scroll to test navbar effects</p>
+			</div>
+		</div>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Navbar JavaScript -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const navbarToggler = document.querySelector(".navbar-toggler");
+				const navbarCollapse = document.getElementById("navbarNav");
+
+				// Toggle navbar on button click
+				navbarToggler.addEventListener("click", function () {
+					const isOpen = navbarCollapse.classList.contains("show");
+					const bsCollapse =
+						bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+					if (isOpen) {
+						bsCollapse.hide();
+					} else {
+						bsCollapse.show();
+					}
+				});
+
+				// Close navbar when clicking outside
+				document.addEventListener("click", function (event) {
+					const isClickInside =
+						navbarCollapse.contains(event.target) ||
+						navbarToggler.contains(event.target);
+					if (!isClickInside && navbarCollapse.classList.contains("show")) {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						bsCollapse.hide();
+					}
+				});
+
+				// Close navbar when a nav link is clicked
+				document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+					link.addEventListener("click", function () {
+						const bsCollapse =
+							bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+						if (navbarCollapse.classList.contains("show")) {
+							bsCollapse.hide();
+						}
+					});
+				});
+
+				// Add scrolled class to navbar on scroll (optional effect)
+				window.addEventListener("scroll", function () {
+					const navbar = document.querySelector(".navbar");
+					if (window.scrollY > 50) {
+						navbar.classList.add("scrolled");
+					} else {
+						navbar.classList.remove("scrolled");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

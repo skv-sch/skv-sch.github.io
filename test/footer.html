@@ -1,0 +1,435 @@
+<!-- School Website Footer - Reusable Component -->
+<!-- Dependencies: Bootstrap 5, Font Awesome 6, Google Fonts (Poppins) -->
+
+<style>
+/* Footer Styles - Include this CSS in your main stylesheet or in the <head> section */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 60px 0 20px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* School Logo and Name */
+.school-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.school-logo:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.school-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.school-tagline {
+    color: #bdc3c7;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Footer Sections */
+.footer-section {
+    margin-bottom: 40px;
+}
+
+.footer-section h5 {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+}
+
+/* Quick Links */
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 12px;
+}
+
+.quick-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.quick-links a::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: #ffffff;
+    padding-left: 25px;
+}
+
+.quick-links a:hover::before {
+    transform: translateX(3px);
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #bdc3c7;
+}
+
+.contact-info i {
+    color: #3498db;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.contact-info a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    border: 2px solid #34495e;
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 30px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.developer-credit {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.developer-credit::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.developer-credit:hover {
+    color: #3498db;
+}
+
+.developer-credit:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .school-name {
+        font-size: 1.5rem;
+    }
+    
+    .school-logo {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-section h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .contact-info li {
+        justify-content: center;
+    }
+    
+    .quick-links {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .school-name {
+        font-size: 1.2rem;
+    }
+    
+    .footer-section h5 {
+        font-size: 1rem;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for footer entrance */
+.footer {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<!-- Footer HTML Structure -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="container">
+            <!-- School Info Section -->
+            <div class="school-info">
+                <div class="school-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="school-name">Excellence Academy</h2>
+                <p class="school-tagline">Nurturing Future Leaders</p>
+            </div>
+            
+            <!-- Main Footer Content -->
+            <div class="row">
+                <!-- Quick Links Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="quick-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="academics.html">Academics</a></li>
+                            <li><a href="admissions.html">Admissions</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact Information Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Contact Information</h5>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Education Street, Learning City, LC 12345</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@excellenceacademy.edu">info@excellenceacademy.edu</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <a href="https://www.excellenceacademy.edu" target="_blank">www.excellenceacademy.edu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Social Media Column -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="footer-section">
+                        <h5>Follow Us</h5>
+                        <div class="social-media">
+                            <a href="#" class="social-icon" aria-label="Facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="YouTube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Excellence Academy. All rights reserved.</p>
+                <p>
+                    Designed and Developed by 
+                    <a href="https://github.com/ShanudhaTirosh" target="_blank" rel="noopener noreferrer" class="developer-credit">
+                        Shanudha Tirosh
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    const links = document.querySelectorAll('.footer a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Add animation delay to footer elements
+    const footerElements = document.querySelectorAll('.footer-section');
+    footerElements.forEach((element, index) => {
+        element.style.animationDelay = `${index * 0.1}s`;
+        element.style.animation = 'fadeInUp 0.6s ease-out forwards';
+    });
+    
+    // Social media icons hover effect enhancement
+    const socialIcons = document.querySelectorAll('.social-icon');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.1)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // School logo rotation on hover
+    const schoolLogo = document.querySelector('.school-logo');
+    if (schoolLogo) {
+        schoolLogo.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px) scale(1.05) rotate(5deg)';
+        });
+        
+        schoolLogo.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+        });
+    }
+});
+</script>
